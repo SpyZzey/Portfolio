@@ -1,0 +1,311 @@
+@font-face {
+    font-family: Signika Negative;
+    src: url('assets/signika.ttf');
+}
+
+/* <editor-fold desc="|| General">*/
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #252525;
+    --on-bg: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+*, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Signika Negative", Arial,sans-serif;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 20px;
+}
+h2.right {
+    margin-left: auto;
+    float: right;
+}
+hr {
+    max-width: 80%;
+    border-color: #808080;
+    animation: UpFadeInSlow 2s;
+}
+hr.center {
+    margin: auto;
+}
+hr.left {
+    margin-right: auto;
+    animation: RightFadeInSlow 1.5s;
+}
+hr.right {
+    margin-left: auto;
+    animation: LeftFadeInSlow 1.5s;
+}
+/* </editor-fold> */
+/* <editor-fold desc="|| Navigation">*/
+nav * {
+    color: var(--on-bg);
+}
+nav#navigation-menu {
+    float: left;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 16px;
+}
+nav#navigation-menu > a {
+    text-underline: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    vertical-align: center;
+}
+nav#navigation-menu > a > img {
+    height: 32px;
+    width: auto;
+}
+nav#socials-menu {
+    float: right;
+}
+nav#socials-menu > a > img {
+    height: 32px;
+    width: auto;
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 100px;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    animation: UpDownMovement 1s infinite;
+
+}
+.scroll-down-indicator > a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 5px;
+}
+.scroll-down-indicator * {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+/* </editor-fold> */
+/* <editor-fold desc="|| Structure">*/
+body {
+    position: relative;
+    max-width: 1300px;
+    background-color: var(--bg-primary);
+    margin: auto;
+}
+header {
+    z-index: 10;
+    width: 100%;
+    max-width: 1300px;
+
+    background-color: var(--bg-primary);
+    height: 64px;
+
+    position: fixed;
+    top: 0;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+main {
+    background-color: var(--bg-primary);
+    margin-top: 64px;
+    color: var(--on-bg);
+}
+footer {
+    background-color: var(--bg-primary);
+    /* height: 400px; */
+}
+/* </editor-fold> */
+/* <editor-fold desc="|| Sections">*/
+#introduction {
+    position: relative;
+    padding: 100px 30px;
+    overflow: hidden;
+    height: calc(100vh - 64px);
+}
+#introduction h1, #introduction h3 {
+    position: relative;
+    z-index: 5;
+
+    background: white;
+    background: linear-gradient(126deg, rgba(255,0,193,1) 0%, rgba(0,198,255,1) 50%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#introduction h1 {
+    animation: UpFadeIn 0.5s;
+}
+#introduction h3 {
+    animation: UpFadeInSlow 1s;
+}
+#introduction-text * {
+    text-align: center;
+}
+
+.bg-image > img {
+    animation: RotateIn 1s;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: auto;
+}
+section:not(#introduction) {
+    animation: UpFadeInSlow 2s;
+}
+section {
+    padding: 15px 15px 15px 15px;
+}
+section .content {
+    background-color: var(--bg-secondary);
+
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+/* </editor-fold> */
+
+/* <editor-fold desc="|| Keyframes">*/
+@keyframes UpDownMovement {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+@keyframes UpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes UpFadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes RightFadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes LeftFadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes RotateIn {
+    0% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* </editor-fold> */
+
+@media only screen and (min-width: 480px) {
+    h1 {
+        font-size: 9vw;
+    }
+    h2 {
+        font-size: 4vw;
+    }
+    h3 {
+        font-size: 3.2vw;
+    }
+    nav#navigation-menu {
+        gap: 32px;
+    }
+
+    #introduction {
+        padding: 150px 50px;
+        height: initial;
+    }
+    #introduction-text * {
+        text-align: initial;
+    }
+    section {
+        padding: 16px 50px 50px 50px;
+    }
+    section .content {
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .scroll-down-indicator {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+}
+
