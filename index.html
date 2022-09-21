@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
     <meta name="description" content="Hey, I am Simon Brebeck - a self-taught full-stack developer with passion to create all kinds of appealing software.">
     <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="_lib/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="_assets/images/mainframe/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="index.js" defer></script>
+    <script src="_lib/js/app.js" defer></script>
+    <script src="/_lib/js/mouse_particles.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,6 +18,7 @@
             <a href=""><img src="_assets/images/mainframe/favicon.png" alt="Logo"></a>
             <a href="#about_a">About</a>
             <a href="#projects_a">Projects</a>
+            <a href="/contact">Contact</a>
         </nav>
         <nav id="socials-menu">
             <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="_assets/images/brands/linkedin.png" alt="LinkedIn"></a>
@@ -62,7 +64,7 @@
                                 <br>
                                 Currently, I live in the beautiful city of Aachen, Germany, studying Computer Science at the RWTH Aachen University.
                             </p>
-                            <button class="card--text-more">Tell me more</button>
+                            <button id="button--about" class="card--text-more button--outline">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -78,7 +80,17 @@
                                     <span>RWTH Aachen University</span>
                                     <span>Computer Science</span>
                                 </div>
+                                <div class="item">
+                                    <span>University of Cologne</span>
+                                    <span>Computer Science Junior Studies</span>
+                                </div>
+                                <div class="item">
+                                    <span>Silverberg-Gymnasium Bedburg</span>
+                                    <span>Abitur</span>
+                                </div>
                             </div>
+
+                            <button id="button--education" class="card--text-more button--outline">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +104,7 @@
                             <div class="image-graph">
                                 <img src="_assets/images/skills/skills.png" alt="Techstack">
                             </div>
-                            <button class="card--text-more">Tell me more</button>
+                            <button id="button--skills" class="card--text-more button--outline">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -105,6 +117,20 @@
                 <h2>Projects</h2>
             </header>
             <div class="content card-list card-list--project">
+                <a href="./projects/calendar/" class="card card--project">
+                    <div class="project-info">
+                        <div class="project-dates">
+                            <h5>June 2022 - Sept. 2022</h5>
+                        </div>
+                        <div class="project-description">
+                            <h5 class="project-subtitle">Web Application</h5>
+                            <h3 class="project-title">Calendar</h3>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <img src="_assets/images/projects/calendar.webp" alt="Calendar">
+                    </div>
+                </a>
                 <a href="./projects/ellipso/" class="card card--project">
                     <div class="project-info">
                         <div class="project-dates">
@@ -117,20 +143,6 @@
                     </div>
                     <div class="project-preview">
                         <img src="_assets/images/projects/ellipso.webp" alt="Ellipso">
-                    </div>
-                </a>
-                <a href="./projects/calendar/" class="card card--project">
-                    <div class="project-info">
-                        <div class="project-dates">
-                            <h5>June 2022 - August 2022</h5>
-                        </div>
-                        <div class="project-description">
-                            <h5 class="project-subtitle">Web Application</h5>
-                            <h3 class="project-title">Calendar</h3>
-                        </div>
-                    </div>
-                    <div class="project-preview">
-                        <img src="_assets/images/projects/calendar.webp" alt="Calendar">
                     </div>
                 </a>
             </div>

@@ -13,6 +13,15 @@
     --button-primary-hover: #880868;
     --button-primary-active: #5d0547;
     --on-button: #fff;
+
+    --textfield-primary: #dc0eab;
+    --textfield-primary-hover: #880868;
+    --textfield-primary-active: #5d0547;
+    --on-textfield: #fff;
+
+    --scrollbar-primary: #dc0eab;
+    --scrollbar-primary-hover: #880868;
+
 }
 html {
     scroll-behavior: smooth;
@@ -56,10 +65,25 @@ h5 {
     font-weight: bold;
     color: var(--on-bg-gray);
 }
+.text--small-box {
+    font-size: 18px;
+    max-width: 400px;
+}
+.image-fit {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.image-fit.phone {
+    height: 600px;
+    width: auto;
+}
+
 hr {
     max-width: 80%;
     border-color: #808080;
-    animation: UpFadeInSlow 2s;
+    animation: UpFadeInSlow 1s;
 }
 hr.center {
     margin: auto;
@@ -72,12 +96,14 @@ hr.right {
     margin-left: auto;
     animation: LeftFadeInSlow 1.5s;
 }
+
 a.anchor {
     top: -110px;
     display: block;
     position: relative;
     visibility: visible;
 }
+
 .random-picture {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -100,7 +126,38 @@ a.anchor {
     color: var(--on-bg);
 }
 
-.page-error, .centered-page {
+.side-by-side {
+    animation: UpFadeInSlow 1s;
+    display: flex;
+    gap: 20px;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.side-by-side > * {
+    flex: 50px 1 1;
+}
+.side-by-side img, .side-by-side .image {
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: relative;
+    width: auto !important;
+    height: auto !important;
+    max-height: 500px;
+}
+.side-by-side .image img {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+}
+.centered-text {
+    text-align: center;
+}
+
+.justified-text {
+    text-align: justify;
+}
+.page-error, .centered-page, .centered-section {
     animation: UpFadeIn 1s;
 
     display: flex;
@@ -111,7 +168,7 @@ a.anchor {
     background-color: #000;
     color: #fff;
 }
-.page-error a {
+.page-error, .page-project a {
     color: #09b5ff;
 }
 /* </editor-fold> */
@@ -140,7 +197,9 @@ nav#navigation-menu > a > img {
     width: auto;
 }
 nav#socials-menu {
-    float: right;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 nav#socials-menu > a > img {
     height: 32px;
@@ -175,7 +234,6 @@ html {
 }
 body {
     position: relative;
-    max-width: 1300px;
     background-color: var(--bg-primary);
     min-height: calc(100vh - 64px);
     margin-left: auto;
@@ -185,12 +243,16 @@ body > header {
     z-index: 10;
     width: 100%;
     max-width: 1300px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(187, 230, 255, 0.3);;
 
     background-color: var(--bg-primary);
     height: 64px;
 
     position: fixed;
     top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 
     padding-left: 20px;
     padding-right: 20px;
@@ -201,15 +263,23 @@ body > header {
     justify-content: space-between;
 }
 body > main {
-    background-color: var(--bg-primary);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    background-color: transparent;
     margin-top: 64px;
     color: var(--on-bg);
     padding-bottom: 80px;
 }
 body > footer {
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 100%;
+    max-width: 1300px;
     padding: 10px 15px;
     height: 80px;
     display: flex;
@@ -276,7 +346,7 @@ body > footer > a:hover {
     height: auto;
 }
 section:not(#introduction) {
-    animation: UpFadeInSlow 2s;
+    animation: UpFadeInSlow 1s;
 }
 section > header {
     width: 100%;
@@ -304,21 +374,33 @@ section .content {
     padding: 20px 15px 50px 15px;
 }
 
-.page-project {
+.page-project > .centered-section, .page-project > .side-by-side {
+    padding: 50px 20px;
+}
+.page-project--content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.page-project img {
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+}
+.page-project--info {
     padding: 20px 20px 20px 20px;
 }
-.page-project > .page-project--title {
+.page-project .page-project--title {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     gap: 20px;
 }
-.page-project > .page-project--title > :last-child {
+.page-project .page-project--title > :last-child {
     min-width: 150px;
     display: flex;
     justify-content: right;
 }
-.page-project > .page-project--info {
+.page-project .page-project--description {
     display: flex;
     flex-flow: column;
     gap: 5px;
@@ -411,6 +493,9 @@ section .content {
     justify-content: space-between;
     gap: 20px;
 }
+.card--project {
+    cursor: pointer;
+}
 .card--project, .card--fw-text {
     width: 100%;
     background-color: var(--bg-secondary);
@@ -419,7 +504,6 @@ section .content {
     display: flex;
     flex-flow: column;
     gap: 15px;
-    cursor: pointer;
     transition: transform 0.5s;
 }
 .card--project:hover {
@@ -471,6 +555,36 @@ a.card {
 }
 
 /* </editor-fold> */
+/* <editor-fold desc="|| Contact Page">*/
+.page-contact {
+    animation: UpFadeIn 1s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+}
+.contact-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* </editor-fold> */
 /* <editor-fold desc="|| Buttons">*/
 button {
     background-color: var(--button-primary);
@@ -489,6 +603,123 @@ button:hover {
 }
 button:active {
     background-color: var(--button-primary-active);
+}
+button.uppercase {
+    text-transform: uppercase;
+}
+
+button.button--outline {
+    background-color: transparent;
+    color: var(--on-bg);
+    border: 1px solid var(--button-primary);
+
+    background: var(--bg-primary);
+    background: linear-gradient(117deg, rgba(0, 0, 0 , 1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
+    transition: background 0.4s ease-out, border-color 0.2s ease-out;
+    background-size: 400px;
+
+}
+button.button--outline:hover {
+    border-color: var(--bg-primary);
+    background-position: -225px;
+}
+button.button--outline:active {
+    background-color: var(--button-primary-active);
+}
+/* </editor-fold> */
+/* <editor-fold desc="|| TEXT">*/
+/*<editor-fold desc="|| SCROLLBAR">*/
+.floating-label-container ::-webkit-scrollbar {
+    width: 8px;
+}
+.floating-label-container ::-webkit-scrollbar-track {
+    background: transparent;
+}
+.floating-label-container ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: var(--scrollbar-primary);
+}
+.floating-label-container ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-primary-hover);
+}
+.floating-label-container ::-webkit-resizer {
+    background: var(--bg-primary);
+}
+/*</editor-fold>*/
+.floating-label-container {
+    border: 1px solid #707070;
+    background-color: var(--bg-primary);
+    color: var(--on-textfield);
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.floating-label-container .text-field, .floating-label-container .text-area {
+    border: none;
+    font-size: 16px;
+    padding: 0 16px;
+    background-color: transparent;
+    color: var(--on-button);
+    outline: 0;
+    height: 48px;
+    width: 100%;
+}
+.floating-label-container .text-area {
+    margin-top: 16px;
+    resize: vertical;
+    min-height: 300px;
+}
+.floating-label-container label {
+    cursor: text;
+    font-size: 16px;
+    background-color: var(--bg-primary);
+    padding: 0 4px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: translate(12px, 14px) scale(1);
+    transition: all .1s ease-in-out;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.floating-label-container.active label {
+    transform: translate(8px, -8px) scale(.75);
+}
+.text-field-indicator {
+    position: absolute;
+    background-color: var(--bg-primary);
+    font-size: 12px;
+    bottom: -8px;
+    right: 16px;
+    padding: 0 4px;
+
+}
+
+:not(.floating-label-container) > .text-field {
+    border: 1px solid #707070;
+    background-color: rgba(var(--button-primary), 1);
+    color: rgba(var(--on-button), 1);
+
+    height: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text-field:-webkit-autofill,
+.text-field:-webkit-autofill:hover,
+.text-field:-webkit-autofill:focus,
+.text-field:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgba(var(--button-primary-hover), 1) inset !important;
+    -webkit-text-fill-color: rgba(var(--on-button), 1) !important;
 }
 /* </editor-fold> */
 /* <editor-fold desc="|| Items">*/
@@ -512,6 +743,34 @@ button:active {
 }
 
 /* </editor-fold> */
+/* <editor-fold desc="|| Particles">*/
+.particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0.1;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+.particle-container {
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    overflow: hidden;
+}
+.button--outline.particle-color {
+    background-color: var(--button-primary);
+}
+
+/* </editor-fold> */
+
 /* <editor-fold desc="|| Keyframes">*/
 @keyframes UpDownMovement {
     0%, 100% {
@@ -631,8 +890,11 @@ button:active {
     .scroll-down-indicator {
         display: none;
     }
-    .page-project {
+    .page-project--info, .page-contact {
         padding: 20px 50px 50px 50px;
+    }
+    .page-project > .centered-section {
+        padding: 50px 50px;
     }
     body > footer {
         padding: 10px 50px;
@@ -676,5 +938,16 @@ button:active {
         background-size: 1000px;
     }
 
+    .side-by-side {
+        display: flex;
+        flex-flow: row;
+        padding: 20px;
+    }
+    .side-by-side > * {
+        flex: 50px 1 1;
+    }
+    .side-by-side.reversed {
+        flex-flow: row-reverse;
+    }
 }
 
