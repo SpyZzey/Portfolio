@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/portfolio",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Simon Brebeck",
+      "email": "simonbrebeck@yahoo.de"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.4"
+  }
+}
