@@ -54,13 +54,13 @@ h1 {
 h2 {
     font-size: 30px;
 }
-h3 {
+h3, #introduction-text .subtitle, .project-description .project-title {
     font-size: 20px;
 }
 h4 {
     font-size: 20px;
 }
-h5 {
+h5, .project-description .project-subtitle, .project-dates {
     font-size: 16px;
     font-weight: bold;
     color: var(--on-bg-gray);
@@ -73,7 +73,7 @@ h5 {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
-    display: block;
+    display: block !important;
 }
 .image-fit.phone {
     height: 600px;
@@ -168,7 +168,7 @@ a.anchor {
     background-color: #000;
     color: #fff;
 }
-.page-error, .page-project a {
+.page-error a, .page-project a {
     color: #09b5ff;
 }
 /* </editor-fold> */
@@ -316,7 +316,7 @@ body > footer > a:hover {
     overflow: hidden;
     height: calc(100vh);
 }
-#introduction h1, #introduction h3 {
+#introduction h1, #introduction .subtitle {
     position: relative;
     z-index: 5;
 
@@ -329,7 +329,7 @@ body > footer > a:hover {
 #introduction h1 {
     animation: UpFadeIn 0.5s;
 }
-#introduction h3 {
+#introduction .subtitle {
     animation: UpFadeInSlow 1s;
 }
 #introduction-text * {
@@ -533,8 +533,11 @@ a.card {
     display: flex;
 }
 .project-preview > img {
+    aspect-ratio: 2 / 1;
     max-height: 500px;
-    max-width: 100%;
+    max-width: 100% !important;
+    width: auto;
+    height: auto !important;
     display: block;
     margin: auto;
 }
@@ -617,11 +620,20 @@ button.button--outline {
     background: linear-gradient(117deg, rgba(0, 0, 0 , 1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
     transition: background 0.4s ease-out, border-color 0.2s ease-out;
     background-size: 400px;
+}
+button.button--outline.dark-gray {
+    background-color: transparent;
+    background: var(--bg-secondary);
+    background: linear-gradient(117deg, rgba(37, 37, 37 , 1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
+    background-size: 400px;
 
 }
 button.button--outline:hover {
     border-color: var(--bg-primary);
     background-position: -225px;
+}
+button.button--outline.dark-gray:hover {
+    border-color: var(--bg-secondary);
 }
 button.button--outline:active {
     background-color: var(--button-primary-active);
@@ -864,7 +876,7 @@ button.button--outline:active {
     #introduction-text h1 {
         font-size: 9vw;
     }
-    #introduction-text h3 {
+    #introduction-text .subtitle {
         font-size: 3.2vw;
     }
 
@@ -908,16 +920,11 @@ button.button--outline:active {
     h2 {
         font-size: 40px;
     }
-    #introduction-text h3, h3 {
-        font-size: 25px;
+    h3, #introduction-text .subtitle, .project-description .project-title {
+        font-size: 25px !important;
     }
     h4 {
         font-size: 20px;
-    }
-    h5 {
-        font-size: 16px;
-        font-weight: bold;
-        color: var(--on-bg-gray);
     }
     .card--small {
         width: 100%;

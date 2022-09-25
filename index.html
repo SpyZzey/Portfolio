@@ -2,40 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Hey, I am Simon Brebeck - a self-taught full-stack developer with passion to create all kinds of appealing software.">
     <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
     <link rel="stylesheet" href="_lib/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" type="image/png" href="_assets/images/mainframe/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="_assets/images/mainframe/favicon.webp">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="_lib/js/app.js" defer></script>
     <script src="/_lib/js/mouse_particles.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav id="navigation-menu">
-            <a href=""><img src="_assets/images/mainframe/favicon.png" alt="Logo"></a>
-            <a href="#about_a">About</a>
-            <a href="#projects_a">Projects</a>
-            <a href="/contact">Contact</a>
-        </nav>
-        <nav id="socials-menu">
-            <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="_assets/images/brands/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="_assets/images/brands/github.png" alt="GitHub"></a>
-        </nav>
-    </header>
+<header>
+    <nav id="navigation-menu">
+        <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
+        <a href="#about_a">About</a>
+        <a href="#projects_a">Projects</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <nav id="socials-menu">
+        <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" width="64" height="64" alt="LinkedIn"></a>
+        <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
+    </nav>
+</header>
     <main>
         <section id="introduction">
             <div id="introduction-text">
                 <h1>Hey! I am Simon.</h1>
-                <h3>A self-taught full-stack developer.</h3>
+                <div class="subtitle">A self-taught full-stack developer.</div>
             </div>
             <div class="bg-image">
                 <img src="_assets/images/mainframe/moon500x500.webp" class="non-selectable" alt="bg-image">
             </div>
             <div class="scroll-down-indicator">
-                <a href="#about_a">
+                <a href="/#about_a">
                     <span>Scroll down</span>
                     <i class="material-icons">arrow_downward</i>
                 </a>
@@ -64,7 +64,7 @@
                                 <br>
                                 Currently, I live in the beautiful city of Aachen, Germany, studying Computer Science at the RWTH Aachen University.
                             </p>
-                            <button id="button--about" class="card--text-more button--outline">Tell me more</button>
+                            <button id="button--about" class="card--text-more button--outline dark-gray">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
 
-                            <button id="button--education" class="card--text-more button--outline">Tell me more</button>
+                            <button id="button--education" class="card--text-more button--outline dark-gray">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -102,9 +102,9 @@
                         </div>
                         <div class="card-back card--icon-text">
                             <div class="image-graph">
-                                <img src="_assets/images/skills/skills.png" alt="Techstack">
+                                <img src="_assets/images/skills/skills.webp" width="1000" height="1000" alt="Techstack">
                             </div>
-                            <button id="button--skills" class="card--text-more button--outline">Tell me more</button>
+                            <button id="button--skills" class="card--text-more button--outline dark-gray">Tell me more</button>
                         </div>
                     </div>
                 </div>
@@ -120,29 +120,29 @@
                 <a href="./projects/calendar/" class="card card--project">
                     <div class="project-info">
                         <div class="project-dates">
-                            <h5>June 2022 - Sept. 2022</h5>
+                            <span>June 2022 - Sept. 2022</span>
                         </div>
                         <div class="project-description">
-                            <h5 class="project-subtitle">Web Application</h5>
-                            <h3 class="project-title">Calendar</h3>
+                            <div class="project-subtitle">Web Application</div>
+                            <div class="project-title">Calendar</div>
                         </div>
                     </div>
                     <div class="project-preview">
-                        <img src="_assets/images/projects/calendar.webp" alt="Calendar">
+                        <img src="_assets/images/projects/calendar.webp" class="image-fit" width="1000" height="500" alt="Calendar">
                     </div>
                 </a>
                 <a href="./projects/ellipso/" class="card card--project">
                     <div class="project-info">
                         <div class="project-dates">
-                            <h5>2020 - present</h5>
+                            <span>2020 - present</span>
                         </div>
                         <div class="project-description">
-                            <h5 class="project-subtitle">Web Application</h5>
-                            <h3 class="project-title">Ellipso</h3>
+                            <div class="project-subtitle">Web Application</div>
+                            <div class="project-title">Ellipso</div>
                         </div>
                     </div>
                     <div class="project-preview">
-                        <img src="_assets/images/projects/ellipso.webp" alt="Ellipso">
+                        <img src="_assets/images/projects/ellipso.webp" class="image-fit" width="1000" height="500" alt="Ellipso">
                     </div>
                 </a>
             </div>
