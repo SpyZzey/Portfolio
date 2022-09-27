@@ -5,22 +5,22 @@
 
 /* <editor-fold desc="|| General">*/
 :root {
-    --bg-primary: #000000;
-    --bg-secondary: #252525;
-    --on-bg: #fff;
-    --on-bg-gray: #969696;
-    --button-primary: #dc0eab;
-    --button-primary-hover: #880868;
-    --button-primary-active: #5d0547;
-    --on-button: #fff;
+    --bg-primary: rgb(0, 0, 0);
+    --bg-secondary: rgb(37, 37, 37);
+    --on-bg: rgb(255, 255, 255);
+    --on-bg-gray: rgb(150, 150, 150);
+    --button-primary: rgb(220, 14, 171);
+    --button-primary-hover: rgb(136, 8, 104);
+    --button-primary-active: rgb(93, 5, 71);
+    --on-button: rgb(255, 255, 255);
 
-    --textfield-primary: #dc0eab;
-    --textfield-primary-hover: #880868;
-    --textfield-primary-active: #5d0547;
-    --on-textfield: #fff;
+    --textfield-primary: rgb(220, 14, 171);
+    --textfield-primary-hover: rgb(136, 8, 104);
+    --textfield-primary-active: rgb(93, 5, 71);
+    --on-textfield: rgb(255, 255, 255);
 
-    --scrollbar-primary: #dc0eab;
-    --scrollbar-primary-hover: #880868;
+    --scrollbar-primary: rgb(220, 14, 171);
+    --scrollbar-primary-hover: rgb(136, 8, 104);
 
 }
 html {
@@ -176,14 +176,85 @@ a.anchor {
 nav * {
     color: var(--on-bg);
 }
-nav#navigation-menu {
-    float: left;
+#navigation-burger {
     display: flex;
+    color: var(--on-bg);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.2s;
+    width: 44px;
+    height: 44px;
+}
+#navigation-burger, #navigation-burger * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#navigation-burger:hover {
+    background-color: var(--bg-secondary);
+}
+#navigation-burger .navigation-burger--close {
+    display: none;
+}
+#navigation-burger.active .navigation-burger--open {
+    display: none;
+}
+#navigation-burger.active .navigation-burger--close {
+    display: block;
+}
+#navigation-drawer {
+    display: initial;
+    position: fixed;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    transform: translateY(-300px);
+    padding: 74px 0 10px 0;
+    transition: transform 0.5s;
+}
+#navigation-drawer.active {
+    transform: translateY(0px);
+}
+#navigation-drawer .navigation-drawer--controls {
+    padding: 20px;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navigation-drawer .navigation-drawer--menu {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+#navigation-drawer .navigation-drawer--menu > a {
+    color: var(--on-bg);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 40px;
+    width: 100%;
+}
+#navigation-drawer .navigation-drawer--menu > a:hover {
+    background-color: var(--bg-secondary);
+}
+
+#navigation-menu {
+    display: none;
+    float: left;
     flex-flow: row;
     align-items: center;
     gap: 16px;
 }
-nav#navigation-menu > a {
+#navigation-menu > a {
     text-underline: none;
     text-decoration: none;
     font-size: 18px;
@@ -192,16 +263,16 @@ nav#navigation-menu > a {
     text-align: center;
     vertical-align: center;
 }
-nav#navigation-menu > a > img {
+#navigation-menu > a > img {
     height: 32px;
     width: auto;
 }
-nav#socials-menu {
+#socials-menu {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-nav#socials-menu > a > img {
+#socials-menu > a > img {
     height: 32px;
     width: auto;
 }
@@ -473,6 +544,22 @@ section .content {
     position: relative;
     transform: rotateY(180deg);
 }
+.card-back .card--image img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+.card-back .card--image {
+    position: absolute;
+    top: 10px;
+    bottom: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card--text-more {
     position: absolute;
     bottom: 16px;
@@ -532,7 +619,8 @@ a.card {
     height: 100%;
     display: flex;
 }
-.project-preview > img {
+
+.card--project .project-preview > img {
     aspect-ratio: 2 / 1;
     max-height: 500px;
     max-width: 100% !important;
@@ -540,7 +628,15 @@ a.card {
     height: auto !important;
     display: block;
     margin: auto;
+    filter: grayscale(100%);
+    transition: filter 0.5s, transform 0.5s;
 }
+
+.card--project:hover .project-preview > img {
+    filter: grayscale(0%) drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
+    transform: scale(1.03);
+}
+
 .image-graph {
     min-height: 0;
     width: 100%;
@@ -910,6 +1006,17 @@ button.button--outline:active {
     }
     body > footer {
         padding: 10px 50px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #navigation-burger {
+        display: none;
+    }
+    #navigation-menu {
+        display: flex;
+    }
+    #navigation-drawer {
+        display: none;
     }
 }
 

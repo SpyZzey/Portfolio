@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
   <link rel="stylesheet" href="/_lib/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="/_lib/js/app.js" defer></script>
@@ -12,6 +13,10 @@
 </head>
 <body>
 <header>
+    <div id="navigation-burger">
+        <i class="material-icons navigation-burger--open">menu</i>
+        <i class="material-icons navigation-burger--close">close</i>
+    </div>
     <nav id="navigation-menu">
         <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
         <a href="/#about_a">About</a>
@@ -23,9 +28,16 @@
         <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
     </nav>
 </header>
+<div id="navigation-drawer">
+    <div class="navigation-drawer--menu">
+        <a href="/#about_a">About</a>
+        <a href="/#projects_a">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
 <main class="page-contact">
   <h2>Contact Me!</h2>
-  <form class="contact-form" action="/_lib/php/submit_message.php" method="post">
+  <form class="contact-form card card--fw-text" action="/_lib/php/submit_message.php" method="post">
     <div class="form-group floating-label-container">
       <label for="name">Name</label>
       <input type="text" class="text-field" name="name" id="name" required>
@@ -43,7 +55,7 @@
                 data-indicator="message-indicator" required></textarea>
       <span id="message-indicator" class="text-field-indicator">0 / 2000</span>
     </div>
-    <button id="button--submit-message" type="submit" class="button--outline particle-color">Send Message</button>
+    <button id="button--submit-message" type="submit" class="button--outline dark-gray particle-color">Send Message</button>
   </form>
 </main>
 <footer>

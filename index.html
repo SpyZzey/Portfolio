@@ -14,10 +14,14 @@
 </head>
 <body>
 <header>
+    <div id="navigation-burger">
+        <i class="material-icons navigation-burger--open">menu</i>
+        <i class="material-icons navigation-burger--close">close</i>
+    </div>
     <nav id="navigation-menu">
         <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
-        <a href="#about_a">About</a>
-        <a href="#projects_a">Projects</a>
+        <a href="/#about_a">About</a>
+        <a href="/#projects_a">Projects</a>
         <a href="/contact">Contact</a>
     </nav>
     <nav id="socials-menu">
@@ -25,136 +29,143 @@
         <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
     </nav>
 </header>
-    <main>
-        <section id="introduction">
-            <div id="introduction-text">
-                <h1>Hey! I am Simon.</h1>
-                <div class="subtitle">A self-taught full-stack developer.</div>
-            </div>
-            <div class="bg-image">
-                <img src="_assets/images/mainframe/moon500x500.webp" class="non-selectable" alt="bg-image">
-            </div>
-            <div class="scroll-down-indicator">
-                <a href="/#about_a">
-                    <span>Scroll down</span>
-                    <i class="material-icons">arrow_downward</i>
-                </a>
-            </div>
-        </section>
-        <hr class="left">
-        <a id="about_a" class="anchor"></a>
-        <section id="about" class="section--titled">
-            <header>
-                <h2 class="left">About</h2>
-            </header>
-            <div class="content card-list">
-                <div class="card card--rotate card--small">
-                    <div class="card-content">
-                        <div class="card-front card--icon-text">
-                            <i class="material-icons">account_circle</i>
-                            <span>Who am I?</span>
-                        </div>
-                        <div class="card-back card--icon-text">
-                            <p>
-                                Hey!
-                                <br>
-                                <br>
-                                I am Simon Brebeck - a self-taught full-stack developer with passion to create all kinds of appealing software.
-                                <br>
-                                <br>
-                                Currently, I live in the beautiful city of Aachen, Germany, studying Computer Science at the RWTH Aachen University.
-                            </p>
-                            <button id="button--about" class="card--text-more button--outline dark-gray">Tell me more</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card--rotate card--small">
-                    <div class="card-content">
-                        <div class="card-front card--icon-text">
-                            <i class="material-icons">school</i>
-                            <span>Education</span>
-                        </div>
-                        <div class="card-back card--icon-text">
-                            <div class="item-list">
-                                <div class="item">
-                                    <span>RWTH Aachen University</span>
-                                    <span>Computer Science</span>
-                                </div>
-                                <div class="item">
-                                    <span>University of Cologne</span>
-                                    <span>Computer Science Junior Studies</span>
-                                </div>
-                                <div class="item">
-                                    <span>Silverberg-Gymnasium Bedburg</span>
-                                    <span>Abitur</span>
-                                </div>
-                            </div>
-
-                            <button id="button--education" class="card--text-more button--outline dark-gray">Tell me more</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="card--skill" class="card card--rotate card--small">
-                    <div class="card-content">
-                        <div class="card-front card--icon-text">
-                            <i class="material-icons">code</i>
-                            <span>Skills</span>
-                        </div>
-                        <div class="card-back card--icon-text">
-                            <div class="image-graph">
-                                <img src="_assets/images/skills/skills.webp" width="1000" height="1000" alt="Techstack">
-                            </div>
-                            <button id="button--skills" class="card--text-more button--outline dark-gray">Tell me more</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="right">
-        <a id="projects_a" class="anchor"></a>
-        <section id="projects" class="section--titled">
-            <header class="right">
-                <h2>Projects</h2>
-            </header>
-            <div class="content card-list card-list--project">
-                <a href="./projects/calendar/" class="card card--project">
-                    <div class="project-info">
-                        <div class="project-dates">
-                            <span>June 2022 - Sept. 2022</span>
-                        </div>
-                        <div class="project-description">
-                            <div class="project-subtitle">Web Application</div>
-                            <div class="project-title">Calendar</div>
-                        </div>
-                    </div>
-                    <div class="project-preview">
-                        <img src="_assets/images/projects/calendar.webp" class="image-fit" width="1000" height="500" alt="Calendar">
-                    </div>
-                </a>
-                <a href="./projects/ellipso/" class="card card--project">
-                    <div class="project-info">
-                        <div class="project-dates">
-                            <span>2020 - present</span>
-                        </div>
-                        <div class="project-description">
-                            <div class="project-subtitle">Web Application</div>
-                            <div class="project-title">Ellipso</div>
-                        </div>
-                    </div>
-                    <div class="project-preview">
-                        <img src="_assets/images/projects/ellipso.webp" class="image-fit" width="1000" height="500" alt="Ellipso">
-                    </div>
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-text">
-            <p class="copyright">
-                &copy; 2021-2022 Simon Brebeck
-            </p>
+<div id="navigation-drawer">
+    <div class="navigation-drawer--menu">
+        <a href="/#about_a">About</a>
+        <a href="/#projects_a">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
+<main>
+    <section id="introduction">
+        <div id="introduction-text">
+            <h1>Hey! I am Simon.</h1>
+            <div class="subtitle">A self-taught full-stack developer.</div>
         </div>
-        <a href="/impress.html">Impressum</a>
-    </footer>
+        <div class="bg-image">
+            <img src="_assets/images/mainframe/moon500x500.webp" class="non-selectable" alt="bg-image">
+        </div>
+        <div class="scroll-down-indicator">
+            <a href="/#about_a">
+                <span>Scroll down</span>
+                <i class="material-icons">arrow_downward</i>
+            </a>
+        </div>
+    </section>
+    <hr class="left">
+    <a id="about_a" class="anchor"></a>
+    <section id="about" class="section--titled">
+        <header>
+            <h2 class="left">About</h2>
+        </header>
+        <div class="content card-list">
+            <div class="card card--rotate card--small">
+                <div class="card-content">
+                    <div class="card-front card--icon-text">
+                        <i class="material-icons">account_circle</i>
+                        <span>Who am I?</span>
+                    </div>
+                    <div class="card-back card--icon-text">
+                        <p>
+                            Hey!
+                            <br>
+                            <br>
+                            I am Simon Brebeck - a self-taught full-stack developer with passion to create all kinds of appealing software.
+                            <br>
+                            <br>
+                            Currently, I live in the beautiful city of Aachen, Germany, studying Computer Science at the RWTH Aachen University.
+                        </p>
+                        <button id="button--about" class="card--text-more button--outline dark-gray">Tell me more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card--rotate card--small">
+                <div class="card-content">
+                    <div class="card-front card--icon-text">
+                        <i class="material-icons">school</i>
+                        <span>Education</span>
+                    </div>
+                    <div class="card-back card--icon-text">
+                        <div class="item-list">
+                            <div class="item">
+                                <span>RWTH Aachen University</span>
+                                <span>Computer Science</span>
+                            </div>
+                            <div class="item">
+                                <span>University of Cologne</span>
+                                <span>Computer Science Junior Studies</span>
+                            </div>
+                            <div class="item">
+                                <span>Silverberg-Gymnasium Bedburg</span>
+                                <span>Abitur</span>
+                            </div>
+                        </div>
+
+                        <button id="button--education" class="card--text-more button--outline dark-gray">Tell me more</button>
+                    </div>
+                </div>
+            </div>
+            <div id="card--skill" class="card card--rotate card--small">
+                <div class="card-content">
+                    <div class="card-front card--icon-text">
+                        <i class="material-icons">code</i>
+                        <span>Skills</span>
+                    </div>
+                    <div class="card-back card--icon-text">
+                        <div class="card--image">
+                            <img src="_assets/images/skills/skills.webp" width="430" height="430" alt="Techstack">
+                        </div>
+                        <button id="button--skills" class="card--text-more button--outline dark-gray">Tell me more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="right">
+    <a id="projects_a" class="anchor"></a>
+    <section id="projects" class="section--titled">
+        <header class="right">
+            <h2>Projects</h2>
+        </header>
+        <div class="content card-list card-list--project">
+            <a href="./projects/calendar/" class="card card--project">
+                <div class="project-info">
+                    <div class="project-dates">
+                        <span>June 2022 - Sept. 2022</span>
+                    </div>
+                    <div class="project-description">
+                        <div class="project-subtitle">Web Application</div>
+                        <div class="project-title">Calendar</div>
+                    </div>
+                </div>
+                <div class="project-preview">
+                    <img src="_assets/images/projects/calendar.webp" class="image-fit" width="1000" height="500" alt="Calendar">
+                </div>
+            </a>
+            <a href="./projects/ellipso/" class="card card--project">
+                <div class="project-info">
+                    <div class="project-dates">
+                        <span>2020 - present</span>
+                    </div>
+                    <div class="project-description">
+                        <div class="project-subtitle">Web Application</div>
+                        <div class="project-title">Ellipso</div>
+                    </div>
+                </div>
+                <div class="project-preview">
+                    <img src="_assets/images/projects/ellipso.webp" class="image-fit" width="1000" height="500" alt="Ellipso">
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-text">
+        <p class="copyright">
+            &copy; 2021-2022 Simon Brebeck
+        </p>
+    </div>
+    <a href="/impress.html">Impressum</a>
+</footer>
 </body>
 </html>

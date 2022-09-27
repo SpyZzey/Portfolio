@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
   <link rel="stylesheet" href="_lib/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/png" href="_assets/images/mainframe/favicon.webp">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="_lib/js/app.js" defer></script>
 </head>
 <body>
 <header>
+  <div id="navigation-burger">
+    <i class="material-icons navigation-burger--open">menu</i>
+    <i class="material-icons navigation-burger--close">close</i>
+  </div>
   <nav id="navigation-menu">
     <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
     <a href="/#about_a">About</a>
@@ -22,6 +27,13 @@
     <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
   </nav>
 </header>
+<div id="navigation-drawer">
+  <div class="navigation-drawer--menu">
+    <a href="/#about_a">About</a>
+    <a href="/#projects_a">Projects</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
 <main class="page-error">
   <h1>404</h1>
   <h2>Page not found</h2>

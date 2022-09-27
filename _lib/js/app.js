@@ -7,16 +7,27 @@ $('.card--rotate').on('click', function (e) {
     }
 });
 
+
+// <editor-fold desc="|| Navigation">
+$('#navigation-burger').on('click', function () {
+    $('#navigation-drawer').toggleClass('active');
+    $(this).toggleClass('active');
+});
+$('#navigation-drawer a').on('click', function () {
+    $('#navigation-drawer').removeClass('active');
+    $('#navigation-burger').removeClass('active');
+});
+// </editor-fold>
 // <editor-fold desc="|| Buttons">
-    $('#button--about').on('click', function () {
-        window.location.href = "/about/";
-    });
-    $('#button--education').on('click', function () {
-        window.location.href = "/education/";
-    });
-    $('#button--skills').on('click', function () {
-        window.location.href = "/skills/";
-    });
+$('#button--about').on('click', function () {
+    window.location.href = "/about/";
+});
+$('#button--education').on('click', function () {
+    window.location.href = "/education/";
+});
+$('#button--skills').on('click', function () {
+    window.location.href = "/skills/";
+});
 // </editor-fold>
 
 // <editor-fold desc="|| Text">
