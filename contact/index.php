@@ -64,7 +64,7 @@
       &copy; 2021-2022 Simon Brebeck
     </p>
   </div>
-  <a href="/impress.html">Impressum</a>
+  <a href="/impress.html">Impress</a>
 </footer>
 </body>
 </html>

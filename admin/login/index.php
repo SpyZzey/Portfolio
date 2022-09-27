@@ -1,3 +1,11 @@
+<?php
+    if(!isset($_SESSION)) session_start();
+    if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+        header('Location: /admin');
+        return;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +17,8 @@
     <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/_lib/js/app.js" defer></script>
-</head>
+    <script src="/_lib/js/mouse_particles.js" defer></script>
+    </head>
 <body>
 <header>
     <div id="navigation-burger">
@@ -34,15 +43,19 @@
         <a href="/contact">Contact</a>
     </div>
 </div>
-<main class="page-error">
-    <h1>Ahhhh</h1>
-    <h2>I am working on it!</h2>
-    <p>But while you are waiting: Here is a random image:</p>
-    <div class="random-picture">
-        <img src="https://picsum.photos/400/200" alt="Random picture">
-        <span class="right"><a href="https://picsum.photos/">Lorem Picsum</a> - Images from <a href="https://unsplash.com/">Unsplash</a></span>
-    </div>
-    <a href="/">Go back to the homepage</a>
+<main class="page-contact">
+    <h2>Login</h2>
+    <form class="login-form card card--fw-text" action="/_lib/php/login.php" method="post">
+        <div class="form-group floating-label-container">
+            <label for="name">Name</label>
+            <input type="text" class="text-field" name="name" id="name" required>
+        </div>
+        <div class="form-group floating-label-container">
+            <label for="password">Password</label>
+            <input type="password" class="text-field" name="password" id="password" required>
+        </div>
+        <button id="button--submit-message" type="submit" class="button--outline dark-gray particle-color">Login</button>
+    </form>
 </main>
 <footer>
     <div class="footer-text">
@@ -54,3 +67,4 @@
 </footer>
 </body>
 </html>
+

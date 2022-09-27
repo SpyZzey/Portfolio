@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION)) session_start();
-    $_SESSION['messages'] = $_SESSION['messages']++ ?? 1;
+    $_SESSION['messages'] = (isset($_SESSION['messages']) ? $_SESSION['messages']++ : 0);
 
     if(!(isset($_POST['name'])
         && isset($_POST['email'])
@@ -11,7 +11,7 @@
         
         header('HTTP/1.1 400 Bad Request');
         header('Content-Type: application/json; charset=UTF-8');
-        header('Location: index.php');
+        header("Location: /contact/");
         die(json_encode(array('message' => 'Bad Request', 'code' => 400)));
     }
     require_once $_SERVER['DOCUMENT_ROOT'] . '/_lib/php/safemysql.class.php';
@@ -30,5 +30,5 @@
 
     header('HTTP/1.1 200 OK');
     header('Content-Type: application/json; charset=UTF-8');
-    header('Location: index.php');
+    header("Location: /contact/");
     die(json_encode(array('message' => 'Message Send', 'code' => 200)));

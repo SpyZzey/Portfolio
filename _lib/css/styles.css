@@ -9,10 +9,16 @@
     --bg-secondary: rgb(37, 37, 37);
     --on-bg: rgb(255, 255, 255);
     --on-bg-gray: rgb(150, 150, 150);
+
     --button-primary: rgb(220, 14, 171);
     --button-primary-hover: rgb(136, 8, 104);
     --button-primary-active: rgb(93, 5, 71);
     --on-button: rgb(255, 255, 255);
+
+    --button-delete: rgb(0, 0, 0);
+    --button-delete-hover: rgba(0, 0, 0, 0.1);
+    --button-delete-active: rgba(0, 0, 0, 0.3);
+    --on-button-delete: rgb(255, 0, 0);
 
     --textfield-primary: rgb(220, 14, 171);
     --textfield-primary-hover: rgb(136, 8, 104);
@@ -372,11 +378,11 @@ body > footer > a:hover {
     width: 100%;
     padding: 20px;
 }
-.impressum {
+.impress {
     max-width: 700px;
     margin: 20px 20px;
 }
-.impressum p {
+.impress p {
     margin-left: 20px;
 }
 /* </editor-fold> */
@@ -662,14 +668,12 @@ a.card {
     align-items: center;
     gap: 10px;
 }
-.contact-form {
+.contact-form, .login-form {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-.contact-form {
     width: 100%;
     max-width: 600px;
 }
@@ -680,6 +684,32 @@ a.card {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    width: 100%;
+}
+
+/* </editor-fold> */
+/* <editor-fold desc="|| Admin Page">*/
+.message-list {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+.message {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    gap: 10px;
+}
+.message .message--header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -733,6 +763,37 @@ button.button--outline.dark-gray:hover {
 }
 button.button--outline:active {
     background-color: var(--button-primary-active);
+}
+
+button.button--icon.delete {
+    background-color: var(--bg-primary);
+    color: var(--on-button-delete);
+}
+button.button--icon {
+    background-color: var(--button-primary);
+    color: var(--on-button);
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-left: 10px;
+    padding-right: 12px;
+    box-shadow: none;
+}
+button.button--icon.dark-gray {
+    background-color: var(--bg-secondary);
+
+}
+button.button--icon:hover {
+    background-color: var(--button-delete-hover);
+}
+button.button--icon.dark-gray:hover {
+    background-color: var(--button-delete-hover);
+}
+button.button--icon:active {
+    background-color: var(--button-delete-active);
 }
 /* </editor-fold> */
 /* <editor-fold desc="|| TEXT">*/

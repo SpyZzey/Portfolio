@@ -1,3 +1,13 @@
+<?php
+    if(!isset($_SESSION)) session_start();
+    if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true) {
+        header('Location: /admin/login');
+        return;
+    }
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/_lib/php/get_message.php';
+    $messages = getMessages();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +19,18 @@
     <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/_lib/js/app.js" defer></script>
+    <script src="/_lib/js/mouse_particles.js" defer></script>
+    <script type="text/javascript">
+        function deleteMessage(id) {
+            $.ajax({
+                url: '/_lib/php/delete_message.php?id=' + id,
+                type: 'DELETE',
+                success: function(data) {
+                    location.reload();
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -23,6 +45,7 @@
         <a href="/contact">Contact</a>
     </nav>
     <nav id="socials-menu">
+        <a href="/_lib/php/logout.php"><button class="button--outline logout-button">Logout</button></a>
         <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" width="64" height="64" alt="LinkedIn"></a>
         <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
     </nav>
@@ -34,15 +57,31 @@
         <a href="/contact">Contact</a>
     </div>
 </div>
-<main class="page-error">
-    <h1>Ahhhh</h1>
-    <h2>I am working on it!</h2>
-    <p>But while you are waiting: Here is a random image:</p>
-    <div class="random-picture">
-        <img src="https://picsum.photos/400/200" alt="Random picture">
-        <span class="right"><a href="https://picsum.photos/">Lorem Picsum</a> - Images from <a href="https://unsplash.com/">Unsplash</a></span>
-    </div>
-    <a href="/">Go back to the homepage</a>
+<main class="page-contact">
+    <h2>Messages</h2>
+    <div class="message-list">
+        <?php foreach ($messages as $message) {?>
+            <div class="message">
+                <div class="message--header">
+                    <h3><?= $message['name'] ?></h3>
+                    <p><?= $message['timestamp'] ?></p>
+                </div>
+                <div class="message--content-item">
+                    <h5>Von</h5>
+                    <p><?= $message['email'] ?></p>
+                </div>
+                <div class="message--content-item">
+                    <h5>Nachricht</h5>
+                    <p><?= $message['message'] ?></p>
+                </div>
+                <div class="message--content-item">
+                    <button class="button--icon delete dark-gray uppercase" onclick="deleteMessage(<?= $message['message_id']; ?>);">
+                        <i class="material-icons">delete</i>
+                        <span>Delete</span>
+                    </button>
+                </div>
+            </div>
+        <?php } ?>
 </main>
 <footer>
     <div class="footer-text">
