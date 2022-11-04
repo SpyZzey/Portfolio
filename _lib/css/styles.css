@@ -46,6 +46,7 @@ body, main {
 }
 main {
     overflow-y: hidden;
+    padding-bottom: 80px !important;
 }
 .non-selectable{
     -webkit-touch-callout: none;
@@ -66,14 +67,39 @@ h3, #introduction-text .subtitle, .project-description .project-title {
 h4 {
     font-size: 20px;
 }
-h5, .project-description .project-subtitle, .project-dates {
+h5, .project-description .project-subtitle, .project-dates, .font--small {
     font-size: 16px;
     font-weight: bold;
     color: var(--on-bg-gray);
 }
+.padding {
+    padding: 10px;
+}
+section.left {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+section.right {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+section.center {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .text--small-box {
     font-size: 18px;
     max-width: 400px;
+}
+.text--medium-box {
+    font-size: 18px;
+    max-width: 800px;
 }
 .image-fit {
     width: 100%;
@@ -160,24 +186,37 @@ a.anchor {
     text-align: center;
 }
 
+h3+.justified-text {
+    margin-top: 10px;
+}
 .justified-text {
     text-align: justify;
 }
-.page-error, .centered-page, .centered-section {
-    animation: UpFadeIn 1s;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
+.justified-text+.justified-text {
+    margin-top: 20px;
 }
-.page-error a, .page-project a {
-    color: #09b5ff;
+.grayed-text {
+    color: rgba(255, 255, 255, 0.5);
 }
 /* </editor-fold> */
+/*<editor-fold desc="|| Scrollbar">*/
+.floating-label-container ::-webkit-scrollbar {
+    width: 8px;
+}
+.floating-label-container ::-webkit-scrollbar-track {
+    background: transparent;
+}
+.floating-label-container ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: var(--scrollbar-primary);
+}
+.floating-label-container ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-primary-hover);
+}
+.floating-label-container ::-webkit-resizer {
+    background: var(--bg-primary);
+}
+/*</editor-fold>*/
 /* <editor-fold desc="|| Navigation">*/
 nav * {
     color: var(--on-bg);
@@ -385,6 +424,15 @@ body > footer > a:hover {
 .impress p {
     margin-left: 20px;
 }
+.bg-image > img {
+    animation: RotateIn 3s;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: auto;
+}
 /* </editor-fold> */
 /* <editor-fold desc="|| Sections">*/
 #introduction {
@@ -411,16 +459,6 @@ body > footer > a:hover {
 }
 #introduction-text * {
     text-align: center;
-}
-
-.bg-image > img {
-    animation: RotateIn 3s;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    height: auto;
 }
 section:not(#introduction) {
     animation: UpFadeInSlow 1s;
@@ -482,7 +520,27 @@ section .content {
     flex-flow: column;
     gap: 5px;
 }
+.page-error, .centered-page, .centered-section {
+    animation: UpFadeIn 1s;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+.page-error a, .page-project a, .page-about a {
+    color: #09b5ff;
+}
+
+.feature-list > li {
+    margin-bottom: 5px;
+}
+.feature-list > li > div:not(:first-child) {
+    color: rgba(255, 255, 255, 0.5);
+}
 /* </editor-fold> */
 /* <editor-fold desc="|| Cards">*/
 .card {
@@ -502,7 +560,16 @@ section .content {
     transform-style: preserve-3d;
 }
 .card--rotate {
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+.card--rotate, .card--rotate *{
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .card.single-sided {
     background-color: var(--bg-secondary);
@@ -510,20 +577,20 @@ section .content {
     padding: 15px;
 }
 
-.card--rotate:hover .card-content {
+.card--rotate:hover {
     transform: translateY(-10px);
 }
 .card--rotate.active:hover .card-content {
-    transform: translateY(-10px) rotateY(180deg);
+    transform: rotateY(180deg);
 }
 .card--rotate:hover .card-front {
-    background-position: -850px;
+    background-position: -1100px;
 }
 .card-front, .card-back {
     background: var(--bg-secondary);
     background: linear-gradient(117deg, rgba(37, 37, 37 ,1) 0%, rgba(37, 37, 37 ,1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
     transition: background 0.5s ease-out;
-    background-size: 1500px;
+    background-size: 2000px;
 
     padding: 10px;
     border-radius: 8px;
@@ -688,6 +755,29 @@ a.card {
 }
 
 /* </editor-fold> */
+/* <editor-fold desc="|| About Me">*/
+.page-about {
+    padding: 10px;
+}
+.page-about > section > h2+p {
+    margin-top: 10px;
+}
+.page-about table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.page-about table td .right {
+    text-align: right;
+}
+.page-about table td {
+    vertical-align: top;
+    padding: 10px;
+}
+.page-about table td.title {
+    width: 100px;
+    font-weight: bold;
+}
+/* </editor-fold> */
 /* <editor-fold desc="|| Admin Page">*/
 .message-list {
     display: flex;
@@ -797,24 +887,6 @@ button.button--icon:active {
 }
 /* </editor-fold> */
 /* <editor-fold desc="|| TEXT">*/
-/*<editor-fold desc="|| SCROLLBAR">*/
-.floating-label-container ::-webkit-scrollbar {
-    width: 8px;
-}
-.floating-label-container ::-webkit-scrollbar-track {
-    background: transparent;
-}
-.floating-label-container ::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    background: var(--scrollbar-primary);
-}
-.floating-label-container ::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-primary-hover);
-}
-.floating-label-container ::-webkit-resizer {
-    background: var(--bg-primary);
-}
-/*</editor-fold>*/
 .floating-label-container {
     border: 1px solid #707070;
     background-color: var(--bg-primary);
@@ -1079,6 +1151,7 @@ button.button--icon:active {
     #navigation-drawer {
         display: none;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -1113,6 +1186,16 @@ button.button--icon:active {
         background-size: 1000px;
     }
 
+    .padding {
+        padding: 20px;
+    }
+    .page-about {
+        padding: 20px;
+    }
+    .page-about table td.title {
+        width: 200px;
+        font-weight: bold;
+    }
     .side-by-side {
         display: flex;
         flex-flow: row;

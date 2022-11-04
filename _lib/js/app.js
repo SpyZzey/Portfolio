@@ -20,13 +20,13 @@ $('#navigation-drawer a').on('click', function () {
 // </editor-fold>
 // <editor-fold desc="|| Buttons">
 $('#button--about').on('click', function () {
-    window.location.href = "/about/";
+    window.location.href = "/about/#section--about-me";
 });
 $('#button--education').on('click', function () {
-    window.location.href = "/education/";
+    window.location.href = "/about/#section--education";
 });
 $('#button--skills').on('click', function () {
-    window.location.href = "/skills/";
+    window.location.href = "/about/#section--skills";
 });
 // </editor-fold>
 

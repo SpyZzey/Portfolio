@@ -15,9 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
     <link rel="stylesheet" href="/_lib/css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="/_lib/css/material_icons.css" rel="stylesheet">
+    <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
     <script src="/_lib/js/app.js" defer></script>
     <script src="/_lib/js/mouse_particles.js" defer></script>
     <script type="text/javascript">
@@ -40,8 +40,8 @@
     </div>
     <nav id="navigation-menu">
         <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
-        <a href="/#about_a">About</a>
-        <a href="/#projects_a">Projects</a>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
         <a href="/contact">Contact</a>
     </nav>
     <nav id="socials-menu">
@@ -52,8 +52,9 @@
 </header>
 <div id="navigation-drawer">
     <div class="navigation-drawer--menu">
-        <a href="/#about_a">About</a>
-        <a href="/#projects_a">Projects</a>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        
         <a href="/contact">Contact</a>
     </div>
 </div>
@@ -63,16 +64,16 @@
         <?php foreach ($messages as $message) {?>
             <div class="message">
                 <div class="message--header">
-                    <h3><?= $message['name'] ?></h3>
-                    <p><?= $message['timestamp'] ?></p>
+                    <h3><?= htmlspecialchars($message['name'], ENT_NOQUOTES) ?></h3>
+                    <p><?= htmlspecialchars($message['timestamp'], ENT_NOQUOTES) ?></p>
                 </div>
                 <div class="message--content-item">
                     <h5>Von</h5>
-                    <p><?= $message['email'] ?></p>
+                    <p><?= htmlspecialchars($message['email'], ENT_NOQUOTES) ?></p>
                 </div>
                 <div class="message--content-item">
                     <h5>Nachricht</h5>
-                    <p><?= $message['message'] ?></p>
+                    <p><?= htmlspecialchars($message['message'], ENT_NOQUOTES) ?></p>
                 </div>
                 <div class="message--content-item">
                     <button class="button--icon delete dark-gray uppercase" onclick="deleteMessage(<?= $message['message_id']; ?>);">

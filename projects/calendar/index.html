@@ -6,9 +6,9 @@
   <meta name="description" content="A Calendar Application build with HTML, JavaScript, CSS, PHP, jQuery, Apache2, MySQL and hosted on a virtual private server">
   <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
   <link rel="stylesheet" href="/_lib/css/styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link href="/_lib/css/material_icons.css" rel="stylesheet">
+  <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
   <script src="/_lib/js/app.js" defer></script>
 </head>
 <body>
@@ -19,8 +19,8 @@
   </div>
   <nav id="navigation-menu">
     <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
-    <a href="/#about_a">About</a>
-    <a href="/#projects_a">Projects</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
     <a href="/contact">Contact</a>
   </nav>
   <nav id="socials-menu">
@@ -30,8 +30,9 @@
 </header>
 <div id="navigation-drawer">
   <div class="navigation-drawer--menu">
-    <a href="/#about_a">About</a>
-    <a href="/#projects_a">Projects</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+
     <a href="/contact">Contact</a>
   </div>
 </div>
@@ -58,7 +59,14 @@
         <p class="justified-text">
           Calendar is a web-based calendar application that allows users to create, edit, and delete events.
           The application is built with HTML, CSS, JavaScript, PHP, jQuery, and MySQL.
-          The application is hosted on a virtual private server with Apache2.
+          It is hosted on a virtual private server with Apache2.
+        </p>
+        <p class="justified-text">
+            The application is built with a mobile-first approach and is fully responsive.
+            It is designed to be used on mobile devices, but can also be used on desktop computers.
+        </p>
+        <p class="justified-text grayed-text">
+          The design is inspired by Samsung's Calendar app.
         </p>
       </div>
       <div class="image">
@@ -67,27 +75,33 @@
     </div>
     <div class="side-by-side reversed">
       <div class="centered-page">
-        <h3>Calendar</h3>
-        <p class="justified-text">
-          Calendar is a web-based calendar application that allows users to create, edit, and delete events.
-          The application is built with HTML, CSS, JavaScript, PHP, jQuery, and MySQL.
-          The application is hosted on a private VPS with Apache2.
-        </p>
+        <h3>Features</h3>
+        <ul class="feature-list">
+          <li>
+            <div>Dark Mode</div>
+            <div>Calendar supports a dark mode for users who prefer a darker theme.</div>
+          </li>
+          <li>
+            <div>Multiple languages</div>
+            <div>Calendar supports multiple languages. Currently, English and German are supported</div>
+          </li>
+          <li>
+            <div>Responsive Design</div>
+            <div>Calendar is designed to be used on any device.</div>
+          </li>
+          <li>
+            <div>Event Creation, Editing and Deletion</div>
+            <div>Calendar allows users to create, edit and delete events.</div>
+          </li>
+        </ul>
       </div>
       <div class="image">
         <img src="/_assets/images/projects/calendar_add_event_phone.webp" alt="Calendar Add Event Image">
       </div>
     </div>
-    <section class="centered-section">
-      <h3></h3>
-      <p class="text--small-box">
-      </p>
-    </section>
+    <hr class="center">
     <div class="centered-section">
       <img class="image-fit" src="/_assets/images/projects/calendar.webp" alt="Calendar">
-    </div>
-    <div class="side-by-side">
-
     </div>
   </section>
 </main>

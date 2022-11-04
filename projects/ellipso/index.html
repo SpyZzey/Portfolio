@@ -6,9 +6,9 @@
   <meta name="description" content="An e-Learning Platform for schools build with HTML, JavaScript, CSS, PHP, jQuery, Apache2, MySQL.">
   <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
   <link rel="stylesheet" href="/_lib/css/styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link href="/_lib/css/material_icons.css" rel="stylesheet">
+  <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
   <script src="/_lib/js/app.js" defer></script>
 </head>
 <body>
@@ -19,8 +19,8 @@
   </div>
   <nav id="navigation-menu">
     <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
-    <a href="/#about_a">About</a>
-    <a href="/#projects_a">Projects</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
     <a href="/contact">Contact</a>
   </nav>
   <nav id="socials-menu">
@@ -30,8 +30,9 @@
 </header>
 <div id="navigation-drawer">
   <div class="navigation-drawer--menu">
-    <a href="/#about_a">About</a>
-    <a href="/#projects_a">Projects</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+
     <a href="/contact">Contact</a>
   </div>
 </div>
@@ -39,35 +40,102 @@
   <section class="page-project--info">
     <div class="page-project--title">
       <h1>Ellipso</h1>
-      <span class="right project-dates">2020 - present</span>
+      <span class="right project-dates">2020 - present (WIP)</span>
     </div>
     <div class="page-project--description">
-      <h3>A modern learning platform.</h3>
+      <h3>A modern learning platform. </h3>
       <h5>HTML, JavaScript, CSS, PHP, jQuery, Apache2</h5>
     </div>
   </section>
   <hr>
-  <section class="centered-section">
-    <h3>The Problem</h3>
-    <p class="text--small-box">
-      Education is an individual process. Nowadays, many learning platforms are still conservative,
-      keeping everything unified without having an eye on the unique progress of every student individually.
-      Teachers may also be too stressed to be able to assist single students.
-    </p>
-  </section>
-  <section class="centered-section">
-    <img class="image-fit" src="/_assets/images/projects/ellipso_dashboard.webp" alt="Ellipso Dashboard Image">
-  </section>
-  <section class="centered-section">
-    <h3>The Solution</h3>
-    <p class="text--small-box">
-      Ellipso shifts the focus to the individual student, allowing them to have a more personalized experience.
-      Also, Ellipso gives the teacher the possibility to use interactive tools, like quizzes and tests,
-      to help students reaching the class goal.
-    </p>
-  </section>
-  <section class="centered-section">
-    <img class="image-fit" src="/_assets/images/projects/ellipso_timetable.webp" alt="Ellipso Timetable Image">
+  <section class="page-project--content">
+    <div class="side-by-side">
+      <div class="centered-page">
+        <h3>Ellipso Learning Platform</h3>
+        <p class="justified-text">
+          Education is an individual process. Nowadays, many learning platforms are still conservative,
+          keeping everything unified without having an eye on the unique progress of every student individually.
+          Teachers may also be too stressed to be able to assist single students.
+        </p>
+        <p class="justified-text">
+          Ellipso shifts the focus to the individual student, allowing them to have a more personalized experience.
+          Also, Ellipso gives the teacher the possibility to use interactive tools, like quizzes and tests,
+          to help students reaching the class goal.
+        </p>
+      </div>
+      <div class="image">
+        <img src="/_assets/images/projects/ellipso_dashboard_phone_2.webp" alt="Ellipso Dashboard">
+      </div>
+    </div>
+    <div class="side-by-side reversed">
+      <div class="centered-page">
+        <h3>Ellipso Modules</h3>
+        <ul class="feature-list">
+          <li>
+            <div>Video Conference Tool</div>
+            <div>Students can join video conferences for online course meetings.</div>
+          </li>
+          <li>
+            <div>Substitutions</div>
+            <div>For students: Information about substitute teachers.</div>
+            <div>For admins: Custom and automated substitution planner.</div>
+          </li>
+          <li>
+            <div>Class Book</div>
+            <div>Record students attendance, grades, etc.</div>
+          </li>
+          <li>
+            <div>Chat</div>
+            <div>Easy communication between teachers, students and parents.</div>
+          </li>
+          <li>
+            <div>Interactive courses</div>
+            <div>Create interactive educational games like quizzes or puzzles.</div>
+          </li>
+          <li>
+            <div>AI powered Learning</div>
+            <div>Study advice and suggestions powered by AI.</div>
+          </li>
+          <li>
+            <div>Individual timetables</div>
+            <div>Represents the students' individual timetables.</div>
+          </li>
+          <li>
+            <div>Forums</div>
+            <div>School/class/course wide forums to share ideas and help.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="/_assets/images/projects/ellipso_course_overview_phone.webp" alt="Ellipso Course Overview">
+      </div>
+    </div>
+    <div class="side-by-side">
+      <div class="centered-page">
+        <h3>Technical Features</h3>
+        <ul class="feature-list">
+          <li>
+            <div>Dark Mode</div>
+            <div>Calendar supports a dark mode for users who prefer a darker theme.</div>
+          </li>
+          <li>
+            <div>Multiple languages</div>
+            <div>Calendar supports multiple languages. Currently, English and German are supported</div>
+          </li>
+          <li>
+            <div>Responsive Design</div>
+            <div>Calendar is designed to be used on any device.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="/_assets/images/projects/ellipso_forum_phone.webp" alt="Ellipso Forum">
+      </div>
+    </div>
+    <hr class="center">
+    <div class="centered-section">
+      <img class="image-fit" src="/_assets/images/projects/ellipso.webp" alt="Ellipso Overview">
+    </div>
   </section>
 </main>
 <footer>

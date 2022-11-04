@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
     <link rel="stylesheet" href="/_lib/css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="/_lib/css/material_icons.css" rel="stylesheet">
+    <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
     <script src="/_lib/js/app.js" defer></script>
     <script src="/_lib/js/mouse_particles.js" defer></script>
 </head>
@@ -19,31 +19,123 @@
     </div>
     <nav id="navigation-menu">
         <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
-        <a href="/#about_a">About</a>
-        <a href="/#projects_a">Projects</a>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
         <a href="/contact">Contact</a>
     </nav>
     <nav id="socials-menu">
-        <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" width="64" height="64" alt="LinkedIn"></a>
-        <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener">
+            <img src="/_assets/images/brands/linkedin.webp" width="64" height="54" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener">
+            <img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub">
+        </a>
     </nav>
 </header>
 <div id="navigation-drawer">
     <div class="navigation-drawer--menu">
-        <a href="/#about_a">About</a>
-        <a href="/#projects_a">Projects</a>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+
         <a href="/contact">Contact</a>
     </div>
 </div>
-<main class="page-error">
-    <h1>Ahhhh</h1>
-    <h2>I am working on it!</h2>
-    <p>But while you are waiting: Here is a random image:</p>
-    <div class="random-picture">
-        <img src="https://picsum.photos/400/200" alt="Random picture">
-        <span class="right"><a href="https://picsum.photos/">Lorem Picsum</a> - Images from <a href="https://unsplash.com/">Unsplash</a></span>
-    </div>
-    <a href="/">Go back to the homepage</a>
+<main class="page-about">
+    <section id="section--about-me" class="padding left">
+        <h2>About Me</h2>
+        <p class="text--medium-box justified-text">
+            I am Simon Brebeck - a self-taught full-stack developer with passion to create all kinds of appealing software.
+            Currently, I live in the beautiful city of Aachen, Germany, studying Computer Science at the RWTH Aachen University.
+            <br>
+            <br>
+            When I was 11 years old, I started programming extensions for a video game called Minecraft with the
+            help of youtube videos. I loved creating my own ideas and seeing them come to life. This is what sparked my
+            interest in programming.
+            <br>
+            <br>
+            But at some point, I wanted to create more than just small Minecraft plugins with Java and MySQL. So I
+            began to learn Sockets to create a Chat Application that I could present as a project in school. This was
+            the first time I programmed something in plain Java without any frameworks or libraries.
+            <br>
+            <br>
+            After that, I started to learn more about web development and created my first website with HTML, CSS and
+            JavaScript. I was amazed by how easy it was to create a website and how much I could do with it.
+            <br>
+            <br>
+            Nowadays, I am working on my own projects and learning new technologies like Spring Boot.
+            See my skills <a href="#section--skills">below</a>.
+        </p>
+    </section>
+    <hr class="right">
+    <section id="section--education" class="padding right">
+        <h2>Education</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="right">Computer Science (Bachelor of Science)</div>
+                        <div class="font--small right">RWTH Aachen University, Germany</div>
+                    </td>
+                    <td class="title">
+                        <div class="font--small">10/2021 - 09/2024</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">Schülerstudium Computer Science (Junior Studies)</div>
+                        <div class="font--small right">University of Cologne, Germany</div>
+                    </td>
+                    <td class="title">
+                        <div class="font--small">04/2019 - 09/2020</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">Abitur (general qualification for university in Germany), Grade: 1.4/1</div>
+                        <div class="font--small right">Silverberg-Gymnasium Bedburg, Germany</div>
+                    </td>
+                    <td class="title">
+                        <div class="font--small">08/2013 - 07/2021</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr class="left">
+    <section id="section--skills" class="padding left">
+        <h2>Skills</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="title">
+                        <div class="font--small">Languages</div>
+                    </td>
+                    <td>
+                        <div>Deutsch <span class="font--small">(native)</span></div>
+                        <div>English <span class="font--small">(fluent, B2/C1)</span></div>
+                        <div>French <span class="font--small">(B1)</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        <div class="font--small">Computer Science</div>
+                    </td>
+                    <td>
+                        <div>Java <span class="font--small">(Advanced)</span></div>
+                        <div>SQL <span class="font--small">(Advanced)</span></div>
+                        <div>HTML <span class="font--small">(Intermediate)</span></div>
+                        <div>CSS <span class="font--small">(Intermediate)</span></div>
+                        <div>JavaScript <span class="font--small">(Intermediate)</span></div>
+                        <div>jQuery <span class="font--small">(Intermediate)</span></div>
+                        <div>PHP <span class="font--small">(Intermediate)</span></div>
+                        <div>Git <span class="font--small">(Intermediate)</span></div>
+                        <div>Adobe XD <span class="font--small">(Intermediate)</span></div>
+                        <div>Apache2 <span class="font--small">(Intermediate)</span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </main>
 <footer>
     <div class="footer-text">

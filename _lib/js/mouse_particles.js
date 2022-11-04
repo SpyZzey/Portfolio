@@ -19,19 +19,21 @@ $('body').append(particleContainer);
     Check if the mouse is on the screen
  */
 let isMouseOnScreen = true;
-$(document).mouseenter(function(){
-    isMouseOnScreen=true;
+$(document).on('pointerenter', function(e){
+    if(e.pointerType === "mouse") isMouseOnScreen=true;
 })
-$(document).mouseleave(function(){
+$(document).on('pointerleave', function(e){
     isMouseOnScreen=false;
 });
 
 /*
     Get the current mouse position and safe it in currentMousePos
  */
-$(document).mousemove(function (event) {
-    currentMousePos.x = event.pageX;
-    currentMousePos.y = event.pageY;
+$(document).on('pointermove', function (e) {
+    if(e.pointerType === "mouse") {
+        currentMousePos.x = e.pageX;
+        currentMousePos.y = e.pageY;
+    }
 });
 
 /*
@@ -40,6 +42,7 @@ $(document).mousemove(function (event) {
 let scrollLeft = 0;
 let scrollTop = 0;
 $(window).scroll(function (e) {
+    if(!isMouseOnScreen) return;
     if(currentMousePos.x < 0 || currentMousePos.y < 0) return;
     if(scrollLeft !== $(document).scrollLeft()) {
         currentMousePos.x -= scrollLeft;

@@ -1,3 +1,4 @@
 /_secure/.env
 /composer.lock
 /vendor
+/private
