@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/profile_picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/projects/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_layer_layout.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_list_folders.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/skills/skills.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/js/mouse_particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/mouse_particles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio/index.html" afterDir="false" />
+    <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Adds storage project page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +143,7 @@
       <workItem from="1669983555495" duration="11000" />
       <workItem from="1671211595739" duration="609000" />
       <workItem from="1671214711832" duration="2656000" />
-      <workItem from="1671321041981" duration="7249000" />
+      <workItem from="1671321041981" duration="7491000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>
@@ -216,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667520392625</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="+ Adds storage project page">
+      <created>1671329287167</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671329287167</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +236,7 @@
     <MESSAGE value="+ Adds admin login&#10;+ Fixes language issues&#10;+ Fixes Redirection error in contact form" />
     <MESSAGE value="+ Adds protfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
     <MESSAGE value="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
+    <MESSAGE value="+ Adds storage project page" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Adds storage project page" />
   </component>
 </project>
