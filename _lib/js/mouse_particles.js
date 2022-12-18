@@ -1,5 +1,5 @@
-const defaultJitter = 20;
-const movementJitter = 10;
+const defaultJitter = 0;
+const movementJitter = 0;
 const particleOffsetX = 0;
 const particleOffsetY = 64;
 

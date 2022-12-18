@@ -101,6 +101,9 @@ section.center {
     font-size: 18px;
     max-width: 800px;
 }
+.rounded-corners {
+    border-radius: 10px;
+}
 .image-fit {
     width: 100%;
     max-width: 100%;
@@ -167,11 +170,10 @@ a.anchor {
 }
 
 .side-by-side > * {
-    flex: 50px 1 1;
+    flex: 1 0 50%;
 }
 .side-by-side img, .side-by-side .image {
-    flex-shrink: 1;
-    flex-grow: 0;
+    flex: 0 1 50%;
     position: relative;
     width: auto !important;
     height: auto !important;
@@ -181,6 +183,7 @@ a.anchor {
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
+    max-width: 100%;
 }
 .centered-text {
     text-align: center;
@@ -500,6 +503,7 @@ section .content {
     border-radius: 15px;
     max-width: 800px;
     width: 100%;
+    height: auto;
 }
 .page-project--info {
     padding: 20px 20px 20px 20px;
@@ -587,8 +591,8 @@ section .content {
     background-position: -1100px;
 }
 .card-front, .card-back {
-    background: var(--bg-secondary);
-    background: linear-gradient(117deg, rgba(37, 37, 37 ,1) 0%, rgba(37, 37, 37 ,1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
+    background: var(--bg-primary);
+    background: linear-gradient(117deg, rgba(20, 20, 20 ,1) 0%, rgba(0, 0, 0 ,1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
     transition: background 0.5s ease-out;
     background-size: 2000px;
 
@@ -658,7 +662,7 @@ section .content {
 }
 .card--project, .card--fw-text {
     width: 100%;
-    background-color: var(--bg-secondary);
+    background: linear-gradient(117deg, rgba(20, 20, 20 ,1) 0%, rgba(10, 10, 10 ,1) 100%);
     border-radius: 8px;
     padding: 30px;
     display: flex;
@@ -776,6 +780,18 @@ a.card {
 .page-about table td.title {
     width: 100px;
     font-weight: bold;
+}
+.about-me-profile {
+}
+.about-me-profile .profile-picture {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+
+    margin-left: 20px;
+    display: block;
+    border-radius: 10%;
+    float: right;
 }
 /* </editor-fold> */
 /* <editor-fold desc="|| Admin Page">*/
@@ -990,8 +1006,8 @@ button.button--icon:active {
     top: 0;
     left: 0;
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 1px;
+    height: 1px;
     opacity: 0.1;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
@@ -1099,6 +1115,24 @@ button.button--icon:active {
     .scroll-down-indicator {
         display: none;
     }
+    .about-me-profile {
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .about-me-profile .profile-picture {
+        max-width: none;
+        max-height: 400px;
+        height: 100%;
+        width: auto;
+
+        margin: 0;
+        display: block;
+        border-radius: 10%;
+        float: right;
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1170,7 +1204,7 @@ button.button--icon:active {
     .card--small {
         width: 100%;
         max-width: 350px;
-        height: 500px;
+        height: 400px;
     }
     .card-list {
         display: flex;
@@ -1202,7 +1236,7 @@ button.button--icon:active {
         padding: 20px;
     }
     .side-by-side > * {
-        flex: 50px 1 1;
+        flex: 1 0 50%;
     }
     .side-by-side.reversed {
         flex-flow: row-reverse;

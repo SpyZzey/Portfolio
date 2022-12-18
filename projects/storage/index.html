@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A Calendar Application build with HTML, JavaScript, CSS, PHP, jQuery, Apache2, MySQL and hosted on a virtual private server">
+  <title>Simon Brebeck | Self-taught Full-Stack Developer</title>
+  <link rel="stylesheet" href="/_lib/css/styles.css">
+  <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
+  <link href="/_lib/css/material_icons.css" rel="stylesheet">
+  <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
+  <script src="/_lib/js/app.js" defer></script>
+</head>
+<body>
+<header>
+  <div id="navigation-burger">
+    <i class="material-icons navigation-burger--open">menu</i>
+    <i class="material-icons navigation-burger--close">close</i>
+  </div>
+  <nav id="navigation-menu">
+    <a href="/"><img src="/_assets/images/mainframe/favicon.webp" width="48" height="48" alt="Logo"></a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <nav id="socials-menu">
+    <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" width="64" height="64" alt="LinkedIn"></a>
+    <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
+  </nav>
+</header>
+<div id="navigation-drawer">
+  <div class="navigation-drawer--menu">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+<main class="page-project">
+  <section class="page-project--info">
+    <div class="page-project--title">
+      <h1>Dynamic Storage System</h1>
+      <span class="right project-dates">Okt. 2022 - Nov. 2022</span>
+    </div>
+    <div class="page-project--description">
+      <h5>Java, Spring Boot, MySQL</h5>
+      <div>
+        <a href="https://github.com/SpyZzey/Calendar">Github User Access</a>
+        -
+        <a href="https://github.com/SpyZzey/Calendar">Github File Access</a>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="page-project--content">
+    <div class="side-by-side">
+      <div class="centered-page">
+        <h3>Dynamic Storage System</h3>
+        <p class="justified-text">
+          The Dynamic Storage System is a scalable storage service REST API designed with Spring Boot
+          to efficiently and securely store and retrieve files.
+        </p>
+        <p class="justified-text">
+          It is built on two layers: the user access layer and the file access layer.
+          The user access layer is responsible for handling incoming user requests, managing access to
+          the database and performing file encryption. It communicates with the file access layer, which acts
+          as the actual storage service. Together, these two layers provide a dynamic storage system capable
+          of securely store files on distributed systems.
+        </p>
+      </div>
+      <div class="image">
+        <img src="/_assets/images/projects/storage_layer_layout.webp" width="542" height="357" alt="Storage Layer Layout">
+      </div>
+    </div>
+    <div class="side-by-side reversed">
+      <div class="centered-page">
+        <h3>Features</h3>
+        <ul class="feature-list">
+          <li>
+            <div>Buckets, Directories and Files</div>
+            <div>Support for common object storage structures used by aws s3 or azure blob.</div>
+          </li>
+          <li>
+            <div>Scalable Service</div>
+            <div>Add new servers to increase storage and request capacities.</div>
+          </li>
+          <li>
+            <div>File Encryption</div>
+            <div>Files are encrypted with a user specific secret key.</div>
+          </li>
+          <li>
+            <div>Token based authentication</div>
+            <div>A Json Web Token is used to authenticate users.</div>
+          </li>
+          <li>
+            <div>Access Control (WIP)</div>
+            <div>Grant certain access permissions to specific users and buckets.</div>
+          </li>
+          <li>
+            <div>Redundancy (WIP)</div>
+            <div>The files can be stored redundantly to improve reliability.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="/_assets/images/projects/storage_list_folders.webp" width="419" height="484" alt="Calendar Add Event Image">
+      </div>
+    </div>
+    <hr class="center">
+    <div class="centered-section">
+      <img class="image-fit" src="/_assets/images/projects/storage_code_background.webp" height="523" width="986" alt="Calendar">
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-text">
+    <p class="copyright">
+      &copy; 2021-2022 Simon Brebeck
+    </p>
+  </div>
+  <a href="/impress.html">Impress</a>
+</footer>
+</body>
+</html>

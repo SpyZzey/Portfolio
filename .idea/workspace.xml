@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/profile_picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_layer_layout.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_list_folders.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/skills/skills.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib/js/mouse_particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/mouse_particles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2DbFIGRdzsskrRlf1stf7FQo57N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_assets/images/projects" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\projects\portfolio" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\private\_assets" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\private\_lib" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
+      <recent name="F:\Program Files\WebStorm\Portfolio" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\private\kjb\ferienfreizeit2022" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Built-in Web Server.Portfolio">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/Portfolio/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Portfolio" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$">
+      <CommandLine parameters="-c &quot;F:\Programs\PHP\php.ini&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="PHP Built-in Web Server.Portfolio" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="" />
+      <created>1660959797266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660959797266</updated>
+      <workItem from="1660959798612" duration="4131000" />
+      <workItem from="1661004807941" duration="5309000" />
+      <workItem from="1661013056045" duration="21974000" />
+      <workItem from="1661091592343" duration="14417000" />
+      <workItem from="1661213216918" duration="1802000" />
+      <workItem from="1661379286085" duration="1363000" />
+      <workItem from="1662931975727" duration="1356000" />
+      <workItem from="1663551291620" duration="647000" />
+      <workItem from="1663603585864" duration="3341000" />
+      <workItem from="1663640733227" duration="5648000" />
+      <workItem from="1663646583463" duration="914000" />
+      <workItem from="1663647522728" duration="2412000" />
+      <workItem from="1663649975245" duration="2638000" />
+      <workItem from="1663694195794" duration="2674000" />
+      <workItem from="1663769058588" duration="9832000" />
+      <workItem from="1664136263238" duration="3695000" />
+      <workItem from="1664141309653" duration="4540000" />
+      <workItem from="1664228620106" duration="10595000" />
+      <workItem from="1664588634534" duration="12000" />
+      <workItem from="1664588663438" duration="281000" />
+      <workItem from="1664650034863" duration="5218000" />
+      <workItem from="1664752694055" duration="6303000" />
+      <workItem from="1665335655598" duration="2444000" />
+      <workItem from="1665437076265" duration="25000" />
+      <workItem from="1665969921113" duration="1097000" />
+      <workItem from="1666031992110" duration="2116000" />
+      <workItem from="1666213922852" duration="1713000" />
+      <workItem from="1666346464564" duration="609000" />
+      <workItem from="1666818770889" duration="598000" />
+      <workItem from="1666997996339" duration="257000" />
+      <workItem from="1667513964670" duration="556000" />
+      <workItem from="1667514528131" duration="6753000" />
+      <workItem from="1669519753932" duration="1032000" />
+      <workItem from="1669786489476" duration="2043000" />
+      <workItem from="1669983555495" duration="11000" />
+      <workItem from="1671211595739" duration="609000" />
+      <workItem from="1671214711832" duration="2656000" />
+      <workItem from="1671321041981" duration="7249000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1661017415187</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661017415187</updated>
+    </task>
+    <task id="LOCAL-00002" summary="+ Adds Impressum&#10;+ Adds Interactive Cards&#10;+ Adds Projects (overview on main page)&#10;+ Adds 404&#10;+ Fixes small design flaws">
+      <created>1661131923511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661131923511</updated>
+    </task>
+    <task id="LOCAL-00003" summary="+ Adds mouse particles&#10;+ Adds contact form">
+      <created>1663778135055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663778135055</updated>
+    </task>
+    <task id="LOCAL-00004" summary="+ Adds composer.json">
+      <created>1663778627611</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663778627611</updated>
+    </task>
+    <task id="LOCAL-00005" summary="+ Minor bug fixes&#10;+ Improves SEO, Meta Desc, Image width and height, ...">
+      <created>1664148732734</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664148732734</updated>
+    </task>
+    <task id="LOCAL-00006" summary="+ Adds navigation burger menu on smaller devices">
+      <created>1664239174860</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664239174860</updated>
+    </task>
+    <task id="LOCAL-00007" summary="+ Adds admin login&#10;+ Fixes language issues&#10;+ Fixes Redirection error in contact form">
+      <created>1664244435834</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664244435834</updated>
+    </task>
+    <task id="LOCAL-00008" summary="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure">
+      <created>1667520392625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667520392625</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="+ Adds Impressum&#10;+ Adds Interactive Cards&#10;+ Adds Projects (overview on main page)&#10;+ Adds 404&#10;+ Fixes small design flaws" />
+    <MESSAGE value="+ Adds mouse particles&#10;+ Adds contact form" />
+    <MESSAGE value="+ Adds composer.json" />
+    <MESSAGE value="+ Minor bug fixes&#10;+ Improves SEO, Meta Desc, Image width and height, ..." />
+    <MESSAGE value="+ Adds navigation burger menu on smaller devices" />
+    <MESSAGE value="+ Adds admin login&#10;+ Fixes language issues&#10;+ Fixes Redirection error in contact form" />
+    <MESSAGE value="+ Adds protfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
+    <MESSAGE value="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Adds portfolio project page&#10;+ Reduces padding on smaller devices&#10;+ Sanitizes input :)&#10;+ Changes directory structure" />
+  </component>
+</project>

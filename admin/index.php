@@ -19,7 +19,7 @@
     <link href="/_lib/css/material_icons.css" rel="stylesheet">
     <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
     <script src="/_lib/js/app.js" defer></script>
-    <script src="/_lib/js/mouse_particles.js" defer></script>
+    <!-- <script src="/_lib/js/mouse_particles.js" defer></script> -->
     <script type="text/javascript">
         function deleteMessage(id) {
             $.ajax({
