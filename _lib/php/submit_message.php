@@ -1,4 +1,5 @@
 <?php
+    return;
     if(!isset($_SESSION)) session_start();
     $_SESSION['messages'] = (isset($_SESSION['messages']) ? $_SESSION['messages']++ : 0);
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/_lib/css/styles.css">
   <link rel="icon" type="image/png" href="/_assets/images/mainframe/favicon.webp">
   <link href="/_lib/css/material_icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   <script src="/_lib/_modules/jQuery/jquery.min.js"></script>
   <script src="/_lib/js/app.js" defer></script>
 </head>
@@ -68,17 +69,12 @@
           of securely store files on distributed systems.
         </p>
       </div>
-      <div class="image">
-        <img src="/_assets/images/projects/storage_layer_layout.webp" width="542" height="357" alt="Storage Layer Layout">
-      </div>
-    </div>
-    <div class="side-by-side reversed">
       <div class="centered-page">
         <h3>Features</h3>
         <ul class="feature-list">
           <li>
             <div>Buckets, Directories and Files</div>
-            <div>Support for common object storage structures used by aws s3 or azure blob.</div>
+            <div>Support for common object storage structures used by AWS S3 or Azure Blob.</div>
           </li>
           <li>
             <div>Scalable Service</div>
@@ -102,13 +98,606 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div class="centered-page">
+      <h3>API Structure</h3>
       <div class="image">
-        <img src="/_assets/images/projects/storage_list_folders.webp" width="419" height="484" alt="Calendar Add Event Image">
+        <img src="/_assets/images/projects/storage_rest_api_endpoints.svg" alt="Storage Service REST API Endpoints">
       </div>
     </div>
+
+    <div class="centered-page">
+      <h4>Authentication</h4>
+      <div class="justified-text">
+        Except for user creation, you have to provide an authentication bearer token
+        in every request inside of the Authorization header. The user-specific token is generated during user creation
+        and should be kept secret (Refresh tokens are not implemented yet).
+      </div>
+    </div>
+
+    <!-- User Creation -->
+    <div class="centered-text">
+      <h4>User Creation</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/users/</span>
+            <span class="request-method--post">POST</span>
+            <span class="request-method--put">PUT</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "email": "john@doe.com"
+}
+          </code>
+        </pre>
+        </div>
+        <div class="justified-text">
+          When creating a new user, please provide an email address, the user's first
+          and last name inside a json object. When updating a user using the PUT-Method, please provide the
+          authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "userId": 1,
+  "token": "SECRET TOKEN"
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Fetching -->
+    <div class="centered-text">
+      <h4>User Fetching</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/users/{user_id}</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          Currently, only the user that sends the request can fetch his own data (who am i). When fetching a user, please provide
+          the user id inside the url and the authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "id": {user_id},
+  "firstname": "John",
+  "lastname": "Doe",
+  "email": "john@doe.com"
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Deletion -->
+    <div class="centered-text">
+      <h4>User Deletion</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/users/{user_id}</span>
+            <span class="request-method--delete">DELETE</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          When deleting a user, please provide the user id inside the url and the authentication token inside the
+          Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+        <div>
+          <span>Response</span>
+          <span class="status-code--200">200</span>
+        </div>
+        <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "User deleted"
+}
+          </code>
+        </pre>
+      </div>
+      </div>
+    </div>
+
+    <!-- Bucket Creation -->
+    <div class="centered-text">
+      <h4>Bucket Creation</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/buckets/?bucket=NAME</span>
+            <span class="request-method--post">POST</span>
+          </div>
+        </div>
+        <div class="justified-text">
+            When creating a new bucket, please provide the bucket name inside the `bucket` query parameter and the authentication token
+            inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Bucket successfully created."
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bucket Listing -->
+    <div class="centered-text">
+      <h4>Bucket Listing</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/buckets/</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          List all buckets that belong to the user that sends the request.
+          When listing all buckets, please provide the authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Buckets successfully loaded.",
+  "data": [
+    {
+      "id": 1,
+      "name": "BUCKET_NAME",
+      "folders": 0,
+      "files": 0,
+      "users": 0
+    }
+  ],
+  "count": 1,
+  "total": 1,
+  "page": 0,
+  "pages": 1
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bucket Deletion -->
+    <div class="centered-text">
+      <h4>Bucket Deletion</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/buckets/{bucket_name}</span>
+            <span class="request-method--delete">DELETE</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          Delete a bucket that belongs to the user that sends the request.
+          Please provide the bucket name inside the url and the authentication token inside the
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Bucket successfully deleted."
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bucket Info -->
+    <div class="centered-text">
+      <h4>Bucket Fetching</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/buckets/{bucket_name}</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          Show information about the bucket that is requested.
+          Please provide the bucket name inside the url and the authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Bucket info successfully loaded.",
+  "data": {
+    "id": 4,
+    "name": "BUCKET_NAME",
+    "folders": 1,
+    "files": 1,
+    "users": 0
+  }
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Folder Creation -->
+    <div class="centered-text">
+      <h4>Folder Creation</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/folders/{bucket}/{parents}?folder=NAME</span>
+            <span class="request-method--get">GET</span>
+          </div>
+          <pre>
+            <code class="language-text hljs">
+Example 1: /api/folders/my_bucket/parent1%2Fparent2?folder=my_folder
+Example 2: /api/folders/my_bucket?folder=my_folder
+            </code>
+          </pre>
+        </div>
+        <div class="justified-text">
+          Create a new folder inside a bucket or another folder.
+          Please note that `parents` is url encoded and that sub-folders in `parents` are separated with %2F
+          (encoding of /). The PathVariable `parents` is optional. Not providing it will create the folder inside the
+          buckets root folder. Please provide the bucket name, any parents if given, and the folder name
+          inside the url and the authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Bucket info successfully loaded.",
+  "data": {
+    "id": 4,
+    "name": "BUCKET_NAME",
+    "folders": 1,
+    "files": 1,
+    "users": 0
+  }
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Folder Listing -->
+    <div class="centered-text">
+      <h4>Folder Listing</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/folders/{bucket}/{parents}/</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          List all folders inside a bucket or another folder.
+          Please note that `parents` is url encoded and that sub-folders in `parents` are separated with %2F (encoding of /).
+          The PathVariable `parents` is optional. Not providing it will list the folders inside the buckets root folder.
+          Please provide the bucket name, any parents if given inside the url and the authentication.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Storage items successfully loaded.",
+  "data": [
+    {
+      "id": 2,
+      "name": "FOLDER_NAME",
+      "path": "/BUCKET_NAME/FOLDER_PATH",
+      "folders": 0,
+      "files": 0
+    }
+  ],
+  "count": 1,
+  "total": 1,
+  "page": 0,
+  "pages": 1
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Folder Deletion -->
+    <div class="centered-text">
+      <h4>Folder Deletion (Not implemented yet)</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/folders/{bucket}/{folder_path}</span>
+            <span class="request-method--delete">DELETE</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          (Not implemented yet) <br>
+          Delete a folder inside a bucket or another folder.
+          Please note that `folder_path` is url encoded and that sub-folders in `folder_path` are separated
+          with %2F (encoding of /). Please provide the bucket name, the folder path inside the url and the
+          authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Folder successfully deleted.",
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- File Upload -->
+    <div class="centered-text">
+      <h4>File Upload</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/files/{bucket}/{folder_path}/</span>
+            <span class="request-method--post">POST</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          Upload a file inside a bucket or a folder.
+          Please note that `folder_path` is url encoded and that sub-folders in `folder_path` are separated
+          with %2F (encoding of /). Please provide the bucket name, the folder path inside the url and the
+          authentication token inside the Authorization header. The file must be provided as a multipart/form-data
+          request.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "path": "/BUCKET_NAME/FOLDER_PATH/FILE_NAME",
+  "status": "ok",
+  "message": "File stored."
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- File Listing -->
+    <div class="centered-text">
+      <h4>File Listing</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/files/{bucket}/{folder_path}/</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          List all files inside a bucket or a folder.
+          Please note that `folder_path` is url encoded and that sub-folders in `folder_path` are separated
+          with %2F (encoding of /). Please provide the bucket name, the folder path inside the url and the
+          authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "Storage items successfully loaded.",
+  "data": [
+    {
+      "id": 1,
+      "name": "FILE_NAME",
+      "path": "/BUCKET_NAME/FOLDER_PATH/FILE_NAME",
+      "file_type": "FILE_TYPE",
+      "size": FILE_SIZE
+    },
+  ],
+  "count": 1,
+  "total": 1,
+  "page": 0,
+  "pages": 1
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- File Download -->
+    <div class="centered-text">
+      <h4>File Download</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/files/download/{bucket}/{file_path}/</span>
+            <span class="request-method--get">GET</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          Download a file inside a bucket or a folder.
+          Please note that `file_path` is url encoded and that sub-folders in `file_path` are separated
+          with %2F (encoding of /). Please provide the bucket name, the file path inside the url and the
+          authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-markup hljs">
+< File >
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- File Deletion -->
+    <div class="centered-text">
+      <h4>File Download (Not implemented yet)</h4>
+    </div>
+    <div class="side-by-side">
+      <div>
+        <div class="rest-api request">
+          <div>
+            <span>/api/files/{bucket}/{file_path}/</span>
+            <span class="request-method--delete">DELETE</span>
+          </div>
+        </div>
+        <div class="justified-text">
+          (Not implemented yet) <br>
+          Delete a file inside a bucket or a folder.
+          Please note that `file_path` is url encoded and that sub-folders in `file_path` are separated
+          with %2F (encoding of /). Please provide the bucket name, the file path inside the url and the
+          authentication token inside the Authorization header.
+        </div>
+      </div>
+      <div>
+        <div class="rest-api response">
+          <div>
+            <span>Response</span>
+            <span class="status-code--200">200</span>
+          </div>
+          <pre>
+          <code class="language-json">
+{
+  "status": "ok",
+  "message": "File successfully deleted.",
+}
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
     <hr class="center">
     <div class="centered-section">
-      <img class="image-fit" src="/_assets/images/projects/storage_code_background.webp" height="523" width="986" alt="Calendar">
+      <img class="image-fit" src="/_assets/images/projects/storage_endpoints_overview.webp" height="500" width="1000" alt="Calendar">
     </div>
   </section>
 </main>
@@ -120,5 +709,10 @@
   </div>
   <a href="/impress.html">Impress</a>
 </footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
 </body>
 </html>

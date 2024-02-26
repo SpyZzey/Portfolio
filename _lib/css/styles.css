@@ -65,7 +65,7 @@ h3, #introduction-text .subtitle, .project-description .project-title {
     font-size: 20px;
 }
 h4 {
-    font-size: 20px;
+    font-size: 17px;
 }
 h5, .project-description .project-subtitle, .project-dates, .font--small {
     font-size: 16px;
@@ -166,11 +166,13 @@ a.anchor {
     display: flex;
     gap: 20px;
     flex-flow: column;
+    align-items: start;
     padding: 20px;
 }
 
 .side-by-side > * {
     flex: 1 0 50%;
+    width: 100%;
 }
 .side-by-side img, .side-by-side .image {
     flex: 0 1 50%;
@@ -427,8 +429,17 @@ body > footer > a:hover {
 .impress p {
     margin-left: 20px;
 }
+.bg-image {
+    animation: RotateIn 2s;
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .bg-image > img {
-    animation: RotateIn 3s;
     z-index: 0;
     position: absolute;
     top: 0;
@@ -436,6 +447,95 @@ body > footer > a:hover {
     width: 500px;
     height: auto;
 }
+.bg-image > #bg-image-author {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+    font-size: 12px;
+    color: var(--on-bg-gray);
+    text-decoration: none;
+}
+.bg-image > #bg-image-author a {
+    text-decoration: none;
+    color: var(--on-bg);
+}
+
+.rest-api {
+    overflow: auto;
+}
+
+.rest-api + div.justified-text {
+    margin-top: 10px
+}
+
+.rest-api.response, .rest-api.request {
+    background-color: #303030;
+    color: #f8f8f2;
+    border-radius: 10px;;
+    font-family: monospace;
+}
+
+.rest-api.response > div, .rest-api.request > div {
+    background-color: #252525;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    gap: 10px;
+    padding: 16px;
+}
+.rest-api.response > div *:first-child, .rest-api.request > div *:first-child {
+    margin-right: auto;
+}
+
+.rest-api.response  [class^='status-code--'], [class^='request-method--'] {
+    padding: 5px;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+}
+.rest-api.response .status-code--200, .request-method--post {
+    background-color: #33e145;
+}
+
+.request-method--delete {
+    background-color: #e13333;
+}
+
+.request-method--get {
+    background-color: #33e1e1;
+}
+
+.request-method--put {
+    background-color: #ffdf00;
+    color: black;
+}
+
+
+code.hljs {
+    background-color: transparent;
+    color: #f8f8f2;
+    border-radius: 10px;
+    font-family: monospace;
+
+    padding: 5px 30px !important;
+}
+pre:has(code.hljs) {
+    display: flex;
+}
+
+.language-json .hljs-punctuation {
+    color: #f8f8f2 !important;
+}
+.language-json .hljs-string {
+    color: #00C000 !important;
+}
+
 /* </editor-fold> */
 /* <editor-fold desc="|| Sections">*/
 #introduction {
@@ -535,7 +635,7 @@ section .content {
     background-color: #000;
     color: #fff;
 }
-.page-error a, .page-project a, .page-about a {
+.page-error a, .page-project a, .page-about a, .page-contact a {
     color: #09b5ff;
 }
 
@@ -784,7 +884,7 @@ a.card {
 .about-me-profile {
 }
 .about-me-profile .profile-picture {
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     height: auto;
 
@@ -1003,14 +1103,36 @@ button.button--icon:active {
 /* <editor-fold desc="|| Particles">*/
 .particle {
     position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 50%;
     width: 1px;
     height: 1px;
     opacity: 0.1;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
+.particle.star {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
+.particle.star.layer0 {
+    width: 1px;
+    height: 1px;
+    animation: MoveUp 50s linear forwards;
+}
+.particle.star.layer1 {
+    width: 3px;
+    height: 3px;
+    animation: MoveUp 60s linear forwards;
+}
+.particle.star.layer2 {
+    width: 4px;
+    height: 4px;
+    filter: blur(2px);
+    animation: MoveUp 70s linear forwards;
+}
+
 .particle-container {
     pointer-events: none;
     z-index: 1;
@@ -1025,10 +1147,34 @@ button.button--icon:active {
 .button--outline.particle-color {
     background-color: var(--button-primary);
 }
+.particle-layer {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
 
 /* </editor-fold> */
 
 /* <editor-fold desc="|| Keyframes">*/
+
+
+@keyframes MoveUp {
+    0% {
+        transform: translateY(0);
+
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
 @keyframes UpDownMovement {
     0%, 100% {
         transform: translateY(0);
@@ -1115,24 +1261,7 @@ button.button--icon:active {
     .scroll-down-indicator {
         display: none;
     }
-    .about-me-profile {
-        display: flex;
-        flex-flow: row-reverse;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 50px;
-    }
-    .about-me-profile .profile-picture {
-        max-width: none;
-        max-height: 400px;
-        height: 100%;
-        width: auto;
 
-        margin: 0;
-        display: block;
-        border-radius: 10%;
-        float: right;
-    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1174,6 +1303,13 @@ button.button--icon:active {
     body > footer {
         padding: 10px 50px;
     }
+    .about-me-profile .profile-picture {
+
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+
+    }
 }
 @media only screen and (min-width: 600px) {
     #navigation-burger {
@@ -1185,7 +1321,6 @@ button.button--icon:active {
     #navigation-drawer {
         display: none;
     }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -1236,10 +1371,32 @@ button.button--icon:active {
         padding: 20px;
     }
     .side-by-side > * {
-        flex: 1 0 50%;
+        flex: 1 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
     .side-by-side.reversed {
         flex-flow: row-reverse;
+    }
+    .about-me-profile .profile-picture {
+        max-width: none;
+        max-height: 400px;
+        height: 100%;
+        width: auto;
+
+        margin: 0;
+        display: block;
+        border-radius: 10%;
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .about-me-profile {
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 50px;
     }
 }
 

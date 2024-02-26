@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -38,6 +38,16 @@
 </div>
 <main class="page-contact">
   <h2>Contact Me!</h2>
+  <div class="card card--fw-text centered-text">
+  <p>If you are interested in collaborating, please feel free to reach out to me via my LinkedIn profile.</p>
+  <div>
+    <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener">@simonbrebeck</a>
+  </div>
+  <div>
+    <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" alt="LinkedIn"></a>
+  </div>
+  </div>
+  <!--
   <form class="contact-form card card--fw-text" action="/_lib/php/submit_message.php" method="post">
     <div class="form-group floating-label-container">
       <label for="name">Name</label>
@@ -58,6 +68,7 @@
     </div>
     <button id="button--submit-message" type="submit" class="button--outline dark-gray particle-color">Send Message</button>
   </form>
+  -->
 </main>
 <footer>
   <div class="footer-text">
