@@ -132,6 +132,10 @@ hr.right {
     animation: LeftFadeInSlow 1.5s;
 }
 
+ul > li {
+    margin-left: 1.2rem;
+}
+
 a.anchor {
     top: -110px;
     display: block;
@@ -1119,18 +1123,18 @@ button.button--icon:active {
 .particle.star.layer0 {
     width: 1px;
     height: 1px;
-    animation: MoveUp 50s linear forwards;
+    animation: MoveUp 60s linear forwards;
 }
 .particle.star.layer1 {
     width: 3px;
     height: 3px;
-    animation: MoveUp 60s linear forwards;
+    animation: MoveUp 70s linear forwards;
 }
 .particle.star.layer2 {
     width: 4px;
     height: 4px;
     filter: blur(2px);
-    animation: MoveUp 70s linear forwards;
+    animation: MoveUp 80s linear forwards;
 }
 
 .particle-container {

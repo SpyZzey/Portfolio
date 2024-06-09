@@ -1,6 +1,6 @@
 // Spawn rate in particles per second
 const spawnRate = 5;
-const spawnBatchSize = 10;
+const spawnBatchSize = 2;
 const millisUntilRemove = 3000;
 const maxWidth = 1300;
 
@@ -13,7 +13,6 @@ setInterval(function () {
 function spawnParticle() {
 
     let width = $(window).width();
-    let height = $(window).height();
 
     let layer = Math.floor(Math.random() * 100);
     if(layer > 90) layer = 2;

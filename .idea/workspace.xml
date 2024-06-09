@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Fixes target of link in projects">
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/simon_brebeck.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/simon_brebeck500x500.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_endpoints_overview.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/projects/storage_rest_api_endpoints.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_lib/js/stars_particles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/php/submit_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/php/submit_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/impress.html" beforeDir="false" afterPath="$PROJECT_DIR$/impress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/calendar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/calendar/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ellipso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ellipso/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib/js/stars_particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/stars_particles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +33,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SpyZzey"
+  }
+}]]></component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -59,6 +47,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SpyZzey/Portfolio.git",
+    "accountId": "9b55e9a5-d894-4aee-9097-a45fe717e44f"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -73,10 +67,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2DbFIGRdzsskrRlf1stf7FQo57N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -87,7 +81,10 @@
   "keyToString": {
     "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "F:/Program Files/WebStorm/Portfolio/_assets/images/projects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,11 +95,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\projects" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio\projects\portfolio" />
       <recent name="F:\Program Files\WebStorm\Portfolio\private\_assets" />
-      <recent name="F:\Program Files\WebStorm\Portfolio\private\_lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
@@ -128,6 +125,13 @@
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -188,7 +192,10 @@
       <workItem from="1692749799911" duration="1394000" />
       <workItem from="1692765402269" duration="8000" />
       <workItem from="1692807922131" duration="1200000" />
-      <workItem from="1708975593830" duration="6610000" />
+      <workItem from="1708975593830" duration="7403000" />
+      <workItem from="1708984334575" duration="855000" />
+      <workItem from="1709060433391" duration="481000" />
+      <workItem from="1717901620045" duration="1579000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>
