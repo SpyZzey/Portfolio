@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Fixes target of link in projects">
+      <change afterPath="$PROJECT_DIR$/_assets/downloads/CV_Simon_Brebeck.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/js/stars_particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/stars_particles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/impress.html" beforeDir="false" afterPath="$PROJECT_DIR$/impress.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/calendar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/calendar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbdesigner/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dbdesigner/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ellipso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ellipso/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +45,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SpyZzey"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SpyZzey&quot;
   }
-}]]></component>
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -47,12 +59,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/SpyZzey/Portfolio.git",
-    "accountId": "9b55e9a5-d894-4aee-9097-a45fe717e44f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SpyZzey/Portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;9b55e9a5-d894-4aee-9097-a45fe717e44f&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -77,22 +89,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/Program Files/WebStorm/Portfolio/_assets/images/projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Program Files/WebStorm/Portfolio/_assets/images/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
@@ -102,11 +114,11 @@
       <recent name="F:\Program Files\WebStorm\Portfolio\private\_assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\downloads" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio" />
       <recent name="F:\Program Files\WebStorm\Portfolio\private\kjb\ferienfreizeit2022" />
-      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\fonts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -195,7 +207,8 @@
       <workItem from="1708975593830" duration="7403000" />
       <workItem from="1708984334575" duration="855000" />
       <workItem from="1709060433391" duration="481000" />
-      <workItem from="1717901620045" duration="1579000" />
+      <workItem from="1717901620045" duration="2286000" />
+      <workItem from="1718054081523" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>

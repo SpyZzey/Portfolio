@@ -46,6 +46,7 @@
     </nav>
     <nav id="socials-menu">
         <a href="/_lib/php/logout.php"><button class="button--outline logout-button">Logout</button></a>
+        <button id="button--download-cv" class="button--outline dark-gray">Download CV</button>
         <a href="https://www.linkedin.com/in/simonbrebeck/" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/linkedin.webp" width="64" height="64" alt="LinkedIn"></a>
         <a href="https://github.com/SpyZzey" target="_blank" rel="noreferrer noopener"><img src="/_assets/images/brands/github.webp" width="64" height="64" alt="GitHub"></a>
     </nav>

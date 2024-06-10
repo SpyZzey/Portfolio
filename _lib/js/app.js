@@ -28,6 +28,9 @@ $('#button--education').on('click', function () {
 $('#button--skills').on('click', function () {
     window.location.href = "/about/#section--skills";
 });
+$('#button--download-cv').on('click', function () {
+    window.open("/_assets/downloads/CV_Simon_Brebeck.pdf", "_blank");
+});
 // </editor-fold>
 
 // <editor-fold desc="|| Text">
