@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Fixes target of link in projects">
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/high-school.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/primary-school.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/sap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/uni_aachen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/uni_cologne.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +197,7 @@
       <workItem from="1717901620045" duration="2286000" />
       <workItem from="1718054081523" duration="2565000" />
       <workItem from="1718230912944" duration="9000" />
-      <workItem from="1718247215761" duration="5312000" />
+      <workItem from="1718247215761" duration="6434000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>
