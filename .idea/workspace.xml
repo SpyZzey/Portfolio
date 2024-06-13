@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Fixes target of link in projects">
-      <change afterPath="$PROJECT_DIR$/_assets/downloads/CV_Simon_Brebeck.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/high-school.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/primary-school.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/sap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/uni_aachen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/uni_cologne.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/impress.html" beforeDir="false" afterPath="$PROJECT_DIR$/impress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/calendar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/calendar/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/dbdesigner/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dbdesigner/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ellipso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ellipso/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/storage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +107,9 @@
       <recent name="F:\Program Files\WebStorm\Portfolio\private\_assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\downloads" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
-      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio" />
       <recent name="F:\Program Files\WebStorm\Portfolio\private\kjb\ferienfreizeit2022" />
     </key>
@@ -208,7 +201,9 @@
       <workItem from="1708984334575" duration="855000" />
       <workItem from="1709060433391" duration="481000" />
       <workItem from="1717901620045" duration="2286000" />
-      <workItem from="1718054081523" duration="590000" />
+      <workItem from="1718054081523" duration="2565000" />
+      <workItem from="1718230912944" duration="9000" />
+      <workItem from="1718247215761" duration="5312000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>
