@@ -20,13 +20,13 @@ $('#navigation-drawer a').on('click', function () {
 // </editor-fold>
 // <editor-fold desc="|| Buttons">
 $('#button--about').on('click', function () {
-    window.location.href = "/about/#section--about-me";
+    window.location.href = "/about/#section--about-me-a";
 });
 $('#button--education').on('click', function () {
-    window.location.href = "/about/#section--education";
+    window.location.href = "/about/#section--education-a";
 });
 $('#button--skills').on('click', function () {
-    window.location.href = "/about/#section--skills";
+    window.location.href = "/about/#section--skills-a";
 });
 $('#button--download-cv').on('click', function () {
     window.open("/_assets/downloads/CV_Simon_Brebeck.pdf", "_blank");
