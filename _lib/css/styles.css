@@ -215,6 +215,9 @@ h3+.justified-text {
 .grayed-text {
     color: rgba(255, 255, 255, 0.5);
 }
+.section-spacer {
+    padding-bottom: 10rem;
+}
 /* </editor-fold> */
 /*<editor-fold desc="|| Scrollbar">*/
 .floating-label-container ::-webkit-scrollbar {
