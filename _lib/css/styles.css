@@ -1474,7 +1474,6 @@ button.button--icon:active {
 
         bottom: -20px;
         right: -13.5px;
-        z-index: 10;
 
 
         background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
@@ -1526,7 +1525,7 @@ button.button--icon:active {
         background-position: bottom;
         background-size: 30px 2px;
         background-repeat: repeat-x;
-        z-index: 10;
+        z-index: 2;
     }
     .timeline-item .timeline-item-image {
         position: absolute;
