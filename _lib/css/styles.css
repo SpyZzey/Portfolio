@@ -931,12 +931,11 @@ a.card {
     background: var(--progress-bar);
 }
 .timeline-path::before{
-    content: '⯈';
+    content: '\2BC6';
     position: absolute;
-    top: 0;
-    right: -20px;
-
-    transform: translateY(-50%);
+    top: 2px;
+    right: -16px;
+    transform: translateY(-50%) rotateZ(-90deg);
 
     background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
     -webkit-background-clip: text;
@@ -1472,11 +1471,11 @@ button.button--icon:active {
         content: '';
     }
     .timeline-path::after{
-        content: '▼';
+        content: '\2BC6';
         position: absolute;
 
         bottom: -20px;
-        right: -13.5px;
+        right: -12.5px;
 
 
         background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
