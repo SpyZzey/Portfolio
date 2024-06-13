@@ -930,14 +930,16 @@ a.card {
     height: 4px;
     background: var(--progress-bar);
 }
-.timeline-path::before{
-    content: 'V';
+.timeline-path::after{
+    content: '';
     position: absolute;
     top: 2px;
     right: -16px;
-    transform: translateY(-50%) rotateZ(-90deg);
+    transform: translateY(-50%);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid rgba(0, 198, 255, 1);
 
-    background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 36px;
@@ -1467,19 +1469,20 @@ button.button--icon:active {
         width: 4px;
         background: var(--progress-bar);
     }
-    .timeline-path::before {
-        content: '';
-    }
     .timeline-path::after{
-        content: 'V';
+        content: '';
         position: absolute;
 
         /* Works on deployed version as font is used */
-        bottom: -30px;
-        right: -8px;
+        top: auto;
+        bottom: -18px;
+        right: -10px;
+        transform: translateY(0);
 
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+        border-top: 20px solid rgba(0, 198, 255, 1);
 
-        background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 36px;
