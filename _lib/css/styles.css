@@ -1463,7 +1463,7 @@ button.button--icon:active {
         position: absolute;
         top: 0;
         left: 50%;
-        height: calc(700px);
+        height: calc(680px);
         width: 4px;
         background: var(--progress-bar);
     }
