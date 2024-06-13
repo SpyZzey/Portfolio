@@ -931,7 +931,7 @@ a.card {
     background: var(--progress-bar);
 }
 .timeline-path::before{
-    content: '\2BC6';
+    content: 'V';
     position: absolute;
     top: 2px;
     right: -16px;
@@ -940,7 +940,7 @@ a.card {
     background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 24pt;
+    font-size: 36px;
 }
 .primary-text {
     font-size: 16px;
@@ -1471,17 +1471,17 @@ button.button--icon:active {
         content: '';
     }
     .timeline-path::after{
-        content: '\2BC6';
+        content: 'V';
         position: absolute;
 
-        bottom: -20px;
-        right: -12.5px;
+        bottom: -25px;
+        right: -10px;
 
 
         background: linear-gradient(126deg, rgba(255, 0, 193, 1) 0%, rgba(0, 198, 255, 1) 10%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 24pt;
+        font-size: 36px;
     }
     .timeline-item {
         position: absolute;
