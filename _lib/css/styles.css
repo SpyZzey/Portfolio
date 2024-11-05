@@ -1,6 +1,7 @@
 @font-face {
     font-family: Signika Negative;
-    src: url('/_assets/fonts/signika.ttf');
+    src: url('/_assets/fonts/signika.woff2') format("woff2"),
+         url('/_assets/fonts/signika.ttf') format("truetype");
 }
 
 /* <editor-fold desc="|| General">*/
@@ -58,7 +59,7 @@ main {
     user-select: none;
 }
 h1 {
-    font-size: 40px;
+    font-size: 1.65rem;
 }
 h2 {
     font-size: 30px;
@@ -68,6 +69,9 @@ h3, #introduction-text .subtitle, .project-description .project-title {
 }
 h4 {
     font-size: 17px;
+}
+.project-dates {
+    text-align: right;
 }
 h5, .project-description .project-subtitle, .project-dates, .font--small {
     font-size: 16px;
@@ -679,6 +683,7 @@ section .content {
     transform-style: preserve-3d;
 }
 .card--rotate {
+    width: 100%;
     transform: translateY(0);
     transition: transform 0.5s;
 }
@@ -766,11 +771,16 @@ section .content {
     height: 400px;
 }
 .card-list {
-    display: flex;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
     flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: stretch;
     gap: 20px;
+    > * {
+        flex: 1 1 0;
+    }
 }
 .card--project {
     cursor: pointer;
@@ -789,7 +799,7 @@ section .content {
     transform: translateY(-10px);
 }
 .card-list--project {
-    flex-flow: column !important;
+    grid-template-columns: repeat(1, 1fr) !important;
 }
 
 a.card {
@@ -1002,6 +1012,9 @@ a.card {
     height: auto;
     width: 140px;
 }
+.timeline-item-image.worldskills {
+    top: -110px !important;
+}
 .timeline-item-image img {
     width: 100%;
     height: auto;
@@ -1012,16 +1025,19 @@ a.card {
         left: 5%;
     }
     &:nth-child(3) {
-        left: 25%;
+        left: 22%;
     }
     &:nth-child(4) {
-        left: 45%;
+        left: 39%;
     }
     &:nth-child(5) {
-        left: 65%;
+        left: 54%;
     }
     &:nth-child(6) {
-        left: 85%;
+        left: 69%;
+    }
+    &:nth-child(7) {
+        left: 84%;
     }
 }
 /* </editor-fold> */
@@ -1052,7 +1068,9 @@ a.card {
 
 /* </editor-fold> */
 /* <editor-fold desc="|| Buttons">*/
+a.button,
 button {
+    text-decoration: none;
     background-color: var(--button-primary);
     color: var(--on-button);
     border: none;
@@ -1064,48 +1082,69 @@ button {
     cursor: pointer;
     transition: background-color 0.2s ease-out;
 }
+a.button:hover,
 button:hover {
     background-color: var(--button-primary-hover);
 }
+a.button:active,
 button:active {
     background-color: var(--button-primary-active);
 }
+a.button.uppercase,
 button.uppercase {
     text-transform: uppercase;
 }
 
+a.button.button--outline,
 button.button--outline {
     background-color: transparent;
     color: var(--on-bg);
     border: 1px solid var(--button-primary);
 
     background: var(--bg-primary);
-    background: linear-gradient(117deg, rgba(0, 0, 0 , 1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
-    transition: background 0.4s ease-out, border-color 0.2s ease-out;
+    background: linear-gradient(
+            117deg,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(255, 0, 193, 1) 60%,
+            rgba(0, 198, 255, 1) 100%
+    );
+    transition:
+            background 0.4s ease-out,
+            border-color 0.2s ease-out;
     background-size: 400px;
 }
+a.button.button--outline.dark-gray,
 button.button--outline.dark-gray {
     background-color: transparent;
     background: var(--bg-secondary);
-    background: linear-gradient(117deg, rgba(37, 37, 37 , 1) 50%, rgba(255,0,193,1) 60%, rgba(0,198,255,1) 100%);
+    background: linear-gradient(
+            117deg,
+            rgba(37, 37, 37, 1) 50%,
+            rgba(255, 0, 193, 1) 60%,
+            rgba(0, 198, 255, 1) 100%
+    );
     background-size: 400px;
-
 }
+a.button.button--outline:hover,
 button.button--outline:hover {
     border-color: var(--bg-primary);
     background-position: -225px;
 }
+a.button.button--outline.dark-gray:hover,
 button.button--outline.dark-gray:hover {
     border-color: var(--bg-secondary);
 }
+a.button.button--outline:active,
 button.button--outline:active {
     background-color: var(--button-primary-active);
 }
 
+a.button.button--icon.delete,
 button.button--icon.delete {
     background-color: var(--bg-primary);
     color: var(--on-button-delete);
 }
+a.button.button--icon,
 button.button--icon {
     background-color: var(--button-primary);
     color: var(--on-button);
@@ -1119,16 +1158,19 @@ button.button--icon {
     padding-right: 12px;
     box-shadow: none;
 }
+a.button.button--icon.dark-gray,
 button.button--icon.dark-gray {
     background-color: var(--bg-secondary);
-
 }
+a.button.button--icon:hover,
 button.button--icon:hover {
     background-color: var(--button-delete-hover);
 }
+a.button.button--icon.dark-gray:hover,
 button.button--icon.dark-gray:hover {
     background-color: var(--button-delete-hover);
 }
+a.button.button--icon:active,
 button.button--icon:active {
     background-color: var(--button-delete-active);
 }
@@ -1425,9 +1467,6 @@ button.button--icon:active {
     .scroll-down-indicator {
         display: none;
     }
-    .page-project--info, .page-contact {
-        padding: 20px 50px 50px 50px;
-    }
     .page-project > .centered-section {
         padding: 50px 50px;
     }
@@ -1452,6 +1491,16 @@ button.button--icon:active {
     #navigation-drawer {
         display: none;
     }
+    .page-project--info {
+        padding: 20px 40px 50px 40px;
+    }
+    .page-project--content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .page-contact {
+        padding: 20px 50px 50px 50px;
+    }
 }
 @media only screen and (max-width: 768px){
     /* Timeline vertical */
@@ -1459,13 +1508,13 @@ button.button--icon:active {
         margin-top: 0;
         margin-bottom: 1rem;
         margin-left: 10px;
-        height: calc(700px);
+        height: 1000px;
     }
     .timeline .timeline-path {
         position: absolute;
         top: 0;
         left: 50%;
-        height: calc(680px);
+        height: 100%;
         width: 4px;
         background: var(--progress-bar);
     }
@@ -1554,6 +1603,9 @@ button.button--icon:active {
         right: -172px;
         bottom: auto;
     }
+    .timeline-item-image.worldskills {
+        top: 30px !important;
+    }
     .timeline-item-image img {
         width: 100%;
         height: auto;
@@ -1563,16 +1615,19 @@ button.button--icon:active {
             top: 0%;
         }
         &:nth-child(3) {
-            top: 20%;
+            top: 17%;
         }
         &:nth-child(4) {
-            top: 40%;
+            top: 34%;
         }
         &:nth-child(5) {
-            top: 60%;
+            top: 51%;
         }
         &:nth-child(6) {
-            top: 80%;
+            top: 68%;
+        }
+        &:nth-child(7) {
+            top: 85%;
         }
     }
 }
@@ -1623,8 +1678,11 @@ button.button--icon:active {
     }
 }
 @media only screen and (min-width: 768px) {
-    #introduction-text h1, h1{
-        font-size: 70px;
+    #introduction-text h1 {
+        font-size: 4.375rem;
+    }
+    h1 {
+        font-size: 3.1rem;
     }
     h2 {
         font-size: 40px;
@@ -1637,21 +1695,14 @@ button.button--icon:active {
     }
     .card--small {
         width: 100%;
-        max-width: 350px;
         height: 400px;
     }
-    .card-list {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
+
     .card--rotate:hover .card-front {
-        background-position: -650px;
+        background-position: -1100px;
     }
     .card-front, .card-back {
-        background-size: 1000px;
+        background-size: 2200px;
     }
 
     .padding {
@@ -1697,5 +1748,13 @@ button.button--icon:active {
         justify-content: space-between;
         gap: 50px;
     }
+    .card-list--project {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .card-list {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
 
