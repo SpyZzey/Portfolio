@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ecb07a-8acf-4d8e-90cb-63e8ca4aa4d1" name="Changes" comment="+ Fixes target of link in projects">
-      <change afterPath="$PROJECT_DIR$/_assets/fonts/signika.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/images/mainframe/worldskills.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/images/projects/gestalt_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/gestalt/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/_lib/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/impress.html" beforeDir="false" afterPath="$PROJECT_DIR$/impress.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -91,28 +94,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Program Files/WebStorm/Portfolio/_assets/fonts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Program Files/WebStorm/Portfolio/_assets/images/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\fonts" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\projects" />
       <recent name="F:\Program Files\WebStorm\Portfolio\projects" />
+      <recent name="F:\Program Files\WebStorm\Portfolio\_assets\fonts" />
       <recent name="F:\Program Files\WebStorm\Portfolio\_assets\images\mainframe" />
       <recent name="F:\Program Files\WebStorm\Portfolio\projects\portfolio" />
     </key>
@@ -144,7 +148,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
       </set>
     </attachedChunks>
   </component>
@@ -217,7 +221,16 @@
       <workItem from="1718647703732" duration="25000" />
       <workItem from="1730563720706" duration="4267000" />
       <workItem from="1730576509685" duration="1731000" />
-      <workItem from="1730689626497" duration="3742000" />
+      <workItem from="1730689626497" duration="5479000" />
+      <workItem from="1732396352649" duration="23000" />
+      <workItem from="1732396395806" duration="3000" />
+      <workItem from="1732402623223" duration="1096000" />
+      <workItem from="1732468924920" duration="581000" />
+      <workItem from="1732560966510" duration="245000" />
+      <workItem from="1742864428226" duration="2505000" />
+      <workItem from="1743533381249" duration="3440000" />
+      <workItem from="1745271426348" duration="10000" />
+      <workItem from="1751433572936" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661017415187</created>

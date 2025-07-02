@@ -97,7 +97,7 @@
 <footer>
     <div class="footer-text">
         <p class="copyright">
-            &copy; 2021-2022 Simon Brebeck
+            &copy; 2021-2025 Simon Brebeck
         </p>
     </div>
     <a href="/impress.html">Impress</a>
