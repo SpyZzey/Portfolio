@@ -1,7 +1,7 @@
 # Portfolio
 This is the github repo of my personal portfolio website.
 
-Feel free to visit it! https://www.simonbrebeck.de (Work in progress)
+Feel free to visit it! https://www.simonbrebeck.de
 
 ## Used technologies
 Front-End:
